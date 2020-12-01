@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
 
-namespace App
+namespace Views
 {
     public partial class New_Order : DevExpress.XtraEditors.XtraForm
     {

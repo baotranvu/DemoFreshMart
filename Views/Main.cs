@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace App
+namespace Views
 {
     public partial class Main : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
@@ -17,7 +17,7 @@ namespace App
         public Main()
         {
             InitializeComponent();
-            this.FormClosing += Form1_FormClosing;
+            
 
         }
 
@@ -30,10 +30,12 @@ namespace App
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Login login_from = new Login();
-            this.Close();
             login_from.ShowDialog();
+            this.Hide();
+            this.Close();
+            
             
         }
 
@@ -64,26 +66,31 @@ namespace App
             login.ShowDialog();
             this.Close();
         }
-        private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            //In case windows is trying to shut down, don't hold the process up
-            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+        
 
-            if (this.DialogResult == DialogResult.Cancel)
-            {
-                // Assume that X has been clicked and act accordingly.
-                // Confirm user wants to close
-                switch (XtraMessageBox.Show(this, "Are you sure?", "Do you still want close ?", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                {
-                    //Stay on this form
-                    case DialogResult.No:
-                        e.Cancel = true;
-                        break;
-                    default:
-                        
-                        break;
-                }
-            }
+        private void accordionNewInvoice_Click(object sender, EventArgs e)
+        {
+            New_Invoice newinvoice = new New_Invoice();
+            newinvoice.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
+
+        private void accordionProductsInfo_Click(object sender, EventArgs e)
+        {
+            New_Order neworder = new New_Order();
+            neworder.ShowDialog();
+            this.Hide();
+            this.Close();
+        }
+
+        private void accordionNewOrder_Click(object sender, EventArgs e)
+        {
+            Product product = new Product();
+            product.ShowDialog();
+            this.Hide();
+            this.Close();
+            
         }
     }
 }

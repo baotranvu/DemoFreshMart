@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using System.Data.SqlClient;
 
 
-namespace App
+namespace Views
 {
     public partial class Login : DevExpress.XtraEditors.XtraForm
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace App
+namespace Views
 {
     public partial class Provider : DevExpress.XtraEditors.XtraForm
     {

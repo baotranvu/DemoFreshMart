@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 
-namespace App
+namespace Views
 {
     public partial class New_Customer : DevExpress.XtraEditors.XtraForm
     {

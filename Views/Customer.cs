@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace App
+namespace Views
 {
-    public partial class Product : DevExpress.XtraEditors.XtraForm
+    public partial class Customer : DevExpress.XtraEditors.XtraForm
     {
-        public Product()
+        public Customer()
         {
             InitializeComponent();
         }

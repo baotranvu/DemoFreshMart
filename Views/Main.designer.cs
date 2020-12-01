@@ -1,4 +1,4 @@
-﻿namespace App
+﻿namespace Views
 {
     partial class Main
     {
@@ -55,6 +55,7 @@
             this.accordionNewInvoice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator12 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlSeparator13 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionInvoiceDetail = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator6 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionProductsInfo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -68,12 +69,9 @@
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Logout = new DevExpress.XtraEditors.SimpleButton();
-            this.accordionInvoiceDetail = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormContainer1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // accordionControl1
@@ -87,7 +85,7 @@
             this.accordionInvoice,
             this.accordionControlSeparator6,
             this.accordionProduct});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 29);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.True;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
@@ -254,6 +252,7 @@
             this.accordionNewInvoice.Name = "accordionNewInvoice";
             this.accordionNewInvoice.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionNewInvoice.Text = "New Invoice";
+            this.accordionNewInvoice.Click += new System.EventHandler(this.accordionNewInvoice_Click);
             // 
             // accordionControlSeparator12
             // 
@@ -262,6 +261,13 @@
             // accordionControlSeparator13
             // 
             this.accordionControlSeparator13.Name = "accordionControlSeparator13";
+            // 
+            // accordionInvoiceDetail
+            // 
+            this.accordionInvoiceDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionInvoiceDetail.ImageOptions.Image")));
+            this.accordionInvoiceDetail.Name = "accordionInvoiceDetail";
+            this.accordionInvoiceDetail.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionInvoiceDetail.Text = "Invoice Detail";
             // 
             // accordionControlSeparator6
             // 
@@ -285,6 +291,7 @@
             this.accordionProductsInfo.Name = "accordionProductsInfo";
             this.accordionProductsInfo.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionProductsInfo.Text = "New Order";
+            this.accordionProductsInfo.Click += new System.EventHandler(this.accordionProductsInfo_Click);
             // 
             // accordionControlSeparator14
             // 
@@ -296,6 +303,7 @@
             this.accordionNewOrder.Name = "accordionNewOrder";
             this.accordionNewOrder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionNewOrder.Text = "Products Info";
+            this.accordionNewOrder.Click += new System.EventHandler(this.accordionNewOrder_Click);
             // 
             // accordionControlSeparator15
             // 
@@ -311,7 +319,7 @@
             this.skinDropDownButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(774, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(770, 29);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
@@ -348,15 +356,16 @@
             // 
             this.skinDropDownButtonItem1.Id = 3;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
+            this.skinDropDownButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // fluentDesignFormContainer1
             // 
             this.fluentDesignFormContainer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.fluentDesignFormContainer1.Controls.Add(this.tableLayoutPanel1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(250, 31);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(250, 29);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(524, 400);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(520, 400);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -365,39 +374,20 @@
             this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.Logout, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.7811F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.218905F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(524, 400);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(520, 400);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // Logout
-            // 
-            this.Logout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Logout.Location = new System.Drawing.Point(3, 378);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(518, 19);
-            this.Logout.TabIndex = 0;
-            this.Logout.Text = "Log Out";
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
-            // 
-            // accordionInvoiceDetail
-            // 
-            this.accordionInvoiceDetail.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionInvoiceDetail.ImageOptions.Image")));
-            this.accordionInvoiceDetail.Name = "accordionInvoiceDetail";
-            this.accordionInvoiceDetail.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionInvoiceDetail.Text = "Invoice Detail";
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(774, 431);
+            this.ClientSize = new System.Drawing.Size(770, 429);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
@@ -411,7 +401,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.fluentDesignFormContainer1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -453,7 +442,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevExpress.XtraEditors.SimpleButton Logout;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
