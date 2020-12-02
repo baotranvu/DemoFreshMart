@@ -63,7 +63,7 @@
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployeeView)).BeginInit();
@@ -93,7 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mEmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,7 +116,7 @@
             // 
             // gridEmployee
             // 
-            this.gridEmployee.DataSource = this.employeeBindingSource;
+            this.gridEmployee.DataSource = this.mEmployeeBindingSource;
             this.gridEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridEmployee.Location = new System.Drawing.Point(0, 0);
             this.gridEmployee.MainView = this.gridEmployeeView;
@@ -501,9 +501,9 @@
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
-            // employeeBindingSource
+            // mEmployeeBindingSource
             // 
-           
+            this.mEmployeeBindingSource.DataSource = typeof(Models.MEmployee);
             // 
             // Employee
             // 
@@ -511,7 +511,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 510);
             this.Controls.Add(this.tableLayoutPanel1);
-           
+            
             this.Text = "Employee";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).EndInit();
@@ -542,7 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mEmployeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,6 +582,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.BindingSource mEmployeeBindingSource;
     }
 }

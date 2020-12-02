@@ -71,7 +71,7 @@
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).BeginInit();
@@ -109,7 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCustomerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -132,7 +132,7 @@
             // 
             // gridCustomer
             // 
-            this.gridCustomer.DataSource = this.customerBindingSource;
+            this.gridCustomer.DataSource = this.mCustomerBindingSource;
             this.gridCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCustomer.Location = new System.Drawing.Point(0, 0);
             this.gridCustomer.MainView = this.gridCustomerView;
@@ -605,9 +605,9 @@
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
-            // customerBindingSource
+            // mCustomerBindingSource
             // 
-          
+            this.mCustomerBindingSource.DataSource = typeof(Models.MCustomer);
             // 
             // Customer
             // 
@@ -654,7 +654,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mCustomerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -702,6 +702,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private System.Windows.Forms.BindingSource customerBindingSource;
+        private System.Windows.Forms.BindingSource mCustomerBindingSource;
     }
 }

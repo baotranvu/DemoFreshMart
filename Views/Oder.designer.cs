@@ -36,19 +36,16 @@
             this.EmpID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrdDate = new DevExpress.XtraGrid.Columns.GridColumn();
-           
-            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.Total = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.mOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
- 
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.ordersBindingSource;
+            this.gridControl1.DataSource = this.mOrderBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -101,18 +98,6 @@
             this.OrdDate.Visible = true;
             this.OrdDate.VisibleIndex = 3;
             // 
-            // order_ds
-            // 
-           
-            // 
-            // ordersBindingSource
-            // 
-          
-            // 
-            // ordersTableAdapter
-            // 
-         
-            // 
             // Total
             // 
             this.Total.FieldName = "Total";
@@ -120,6 +105,10 @@
             this.Total.Name = "Total";
             this.Total.Visible = true;
             this.Total.VisibleIndex = 4;
+            // 
+            // mOrderBindingSource
+            // 
+            this.mOrderBindingSource.DataSource = typeof(Models.MOrder);
             // 
             // Oder
             // 
@@ -132,8 +121,7 @@
             this.Load += new System.EventHandler(this.Oder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            
-            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,9 +134,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn EmpID;
         private DevExpress.XtraGrid.Columns.GridColumn ProID;
         private DevExpress.XtraGrid.Columns.GridColumn OrdDate;
-     
-        private System.Windows.Forms.BindingSource ordersBindingSource;
         
         private DevExpress.XtraGrid.Columns.GridColumn Total;
+        private System.Windows.Forms.BindingSource mOrderBindingSource;
     }
 }

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Models
 {
-    class MProduct : Object
+    public class MProduct : Object
     {
         public DateTime MFG { get; set; }
         public DateTime EXP { get; set; }
