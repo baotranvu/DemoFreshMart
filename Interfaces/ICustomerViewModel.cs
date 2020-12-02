@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace ViewModels
+namespace Interfaces
 {
     public interface ICustomerViewModel
     {

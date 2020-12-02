@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Interfaces;
 
 namespace ViewModels
 {
-    class CustomerViewModel : INotifyPropertyChanged, ICustomerViewModel
+    public class CustomerViewModel : INotifyPropertyChanged, ICustomerViewModel
     {
         public BindingSource CustomerBindingSource
         {

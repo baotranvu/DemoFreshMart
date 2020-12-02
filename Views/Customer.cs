@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using Interfaces;
+using Unity;
 
 namespace Views
 {
     public partial class Customer : DevExpress.XtraEditors.XtraForm
     {
+        private ICustomerViewModel _vm = Config.Container.Resolve<ICustomerViewModel>();
         public Customer()
         {
             InitializeComponent();
