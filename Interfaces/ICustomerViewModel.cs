@@ -13,6 +13,7 @@ namespace Interfaces
         void Delete();
         void Save();
         void Load();
+        void ShowDetail(IDetailView detail);
       
     }
 }

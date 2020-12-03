@@ -12,5 +12,10 @@ namespace Views
         {
             InitializeComponent();
         }
+
+        private void New_Click(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

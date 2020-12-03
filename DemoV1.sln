@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1300
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{C565D5CC-D042-4E4F-A5C0-CBF8C7DC61FC}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{A52D6F62-0893-4556-ABC4-8A4ABA99A995}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{4DDEB31D-14C7-41D2-8B3D-A5735CB20F89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{AF0F542D-88FC-42E6-AE6C-4529F381F286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{4DDEB31D-14C7-41D2-8B3D-A5735CB20F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DDEB31D-14C7-41D2-8B3D-A5735CB20F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DDEB31D-14C7-41D2-8B3D-A5735CB20F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0F542D-88FC-42E6-AE6C-4529F381F286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0F542D-88FC-42E6-AE6C-4529F381F286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0F542D-88FC-42E6-AE6C-4529F381F286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0F542D-88FC-42E6-AE6C-4529F381F286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66AFC9FB-02EA-42C0-8156-44B37A84665B}
 	EndGlobalSection
 EndGlobal

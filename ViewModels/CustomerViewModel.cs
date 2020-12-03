@@ -37,6 +37,16 @@ namespace ViewModels
 
         public void Initialize()
         {
+            
+                CustomerBindingSource.CurrentChanged += delegate { Notify("Title"); };
+             
+
+                
+            
+        }
+
+        private void Notify(string v)
+        {
             throw new NotImplementedException();
         }
 
@@ -53,6 +63,11 @@ namespace ViewModels
         public void Save()
         {
             throw new NotImplementedException();
+        }
+        public void ShowDetail(IDetailView detail)
+        {
+            detail.BindingSource.DataSource = CustomerBindingSource.Current;
+            detail.ShowModal();
         }
     }
 }
