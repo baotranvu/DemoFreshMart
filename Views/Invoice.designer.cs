@@ -92,7 +92,7 @@
             // 
             // mInvoiceBindingSource
             // 
-            this.mInvoiceBindingSource.DataSource = typeof(Models.MInvoice);
+           
             // 
             // Invoice
             // 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="99ab43917386421b94dbb367adf78919" Name="Diagram1">
+        <EntityTypeShape EntityType="SuperMarketModel.Customers" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Employees" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Invoices" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Orders" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Products" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Providers" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Account" Width="1.5" PointX="8" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Invoice_detail" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Order_Detail" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <AssociationConnector Association="SuperMarketModel.FK_Account_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoices_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoice_detail_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Orders" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

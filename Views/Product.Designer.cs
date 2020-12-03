@@ -622,7 +622,7 @@
             // 
             // mProductBindingSource
             // 
-            this.mProductBindingSource.DataSource = typeof(Models.MProduct);
+            
             // 
             // Product
             // 

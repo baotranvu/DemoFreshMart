@@ -108,7 +108,7 @@
             // 
             // mOrderBindingSource
             // 
-            this.mOrderBindingSource.DataSource = typeof(Models.MOrder);
+           
             // 
             // Oder
             // 

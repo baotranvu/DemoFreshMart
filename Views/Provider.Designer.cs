@@ -527,7 +527,7 @@
             // 
             // mProviderBindingSource
             // 
-            this.mProviderBindingSource.DataSource = typeof(Models.MProvider);
+            
             // 
             // Provider
             // 

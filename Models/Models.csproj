@@ -30,12 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,21 +59,69 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MAccount.cs" />
-    <Compile Include="MCustomer.cs" />
-    <Compile Include="MEmployee.cs" />
-    <Compile Include="MInvoice.cs" />
-    <Compile Include="MInvoiceDetail.cs" />
-    <Compile Include="MOrder.cs" />
-    <Compile Include="MOrderDetail.cs" />
-    <Compile Include="MProduct.cs" />
-    <Compile Include="Object.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Account.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employees.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FreshMart.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshMart.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FreshMart.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FreshMart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshMart.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoices.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice_detail.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Products.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MProvider.cs" />
+    <Compile Include="Providers.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EntityDeploy Include="FreshMart.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FreshMart.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="FreshMart.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FreshMart.Context.cs</LastGenOutput>
+      <DependentUpon>FreshMart.edmx</DependentUpon>
+    </None>
+    <None Include="FreshMart.edmx.diagram">
+      <DependentUpon>FreshMart.edmx</DependentUpon>
+    </None>
+    <None Include="FreshMart.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FreshMart.edmx</DependentUpon>
+      <LastGenOutput>FreshMart.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +129,12 @@
       <Project>{af0f542d-88fc-42e6-ae6c-4529f381f286}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

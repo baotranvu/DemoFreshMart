@@ -136,18 +136,6 @@
     <Compile Include="Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="New_Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="New_Customer.designer.cs">
-      <DependentUpon>New_Customer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="New_Employee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="New_Employee.designer.cs">
-      <DependentUpon>New_Employee.cs</DependentUpon>
-    </Compile>
     <Compile Include="New_Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,18 +147,6 @@
     </Compile>
     <Compile Include="New_Order.designer.cs">
       <DependentUpon>New_Order.cs</DependentUpon>
-    </Compile>
-    <Compile Include="New_Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="New_Product.designer.cs">
-      <DependentUpon>New_Product.cs</DependentUpon>
-    </Compile>
-    <Compile Include="New_Provider.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="New_Provider.designer.cs">
-      <DependentUpon>New_Provider.cs</DependentUpon>
     </Compile>
     <Compile Include="Oder.cs">
       <SubType>Form</SubType>
@@ -216,23 +192,11 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="New_Customer.resx">
-      <DependentUpon>New_Customer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="New_Employee.resx">
-      <DependentUpon>New_Employee.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="New_Invoice.resx">
       <DependentUpon>New_Invoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New_Order.resx">
       <DependentUpon>New_Order.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="New_Product.resx">
-      <DependentUpon>New_Product.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="New_Provider.resx">
-      <DependentUpon>New_Provider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Oder.resx">
       <DependentUpon>Oder.cs</DependentUpon>
@@ -254,13 +218,15 @@
       <DependentUpon>Provider.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Models.MAccount.datasource" />
-    <None Include="Properties\DataSources\Models.MCustomer.datasource" />
-    <None Include="Properties\DataSources\Models.MEmployee.datasource" />
-    <None Include="Properties\DataSources\Models.MInvoice.datasource" />
-    <None Include="Properties\DataSources\Models.MOrder.datasource" />
-    <None Include="Properties\DataSources\Models.MProduct.datasource" />
-    <None Include="Properties\DataSources\Models.MProvider.datasource" />
+    <None Include="Properties\DataSources\Models.Account.datasource" />
+    <None Include="Properties\DataSources\Models.Customers.datasource" />
+    <None Include="Properties\DataSources\Models.Employees.datasource" />
+    <None Include="Properties\DataSources\Models.Invoices.datasource" />
+    <None Include="Properties\DataSources\Models.Invoice_detail.datasource" />
+    <None Include="Properties\DataSources\Models.Orders.datasource" />
+    <None Include="Properties\DataSources\Models.Order_Detail.datasource" />
+    <None Include="Properties\DataSources\Models.Products.datasource" />
+    <None Include="Properties\DataSources\Models.Providers.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -292,6 +258,7 @@
       <Name>ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

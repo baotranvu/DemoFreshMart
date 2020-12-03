@@ -503,7 +503,7 @@
             // 
             // mEmployeeBindingSource
             // 
-            this.mEmployeeBindingSource.DataSource = typeof(Models.MEmployee);
+           
             // 
             // Employee
             // 

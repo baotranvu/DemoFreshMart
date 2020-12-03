@@ -32,18 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridCustomer = new DevExpress.XtraGrid.GridControl();
-            this.mCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridCustomerView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CusIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CusNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.CusPhone = new DevExpress.XtraEditors.TextEdit();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CusAdd = new DevExpress.XtraEditors.TextEdit();
             this.CusBirth = new DevExpress.XtraEditors.DateEdit();
             this.CusGender = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CusID = new DevExpress.XtraEditors.TextEdit();
             this.CusMail = new DevExpress.XtraEditors.TextEdit();
             this.Point = new DevExpress.XtraEditors.TextEdit();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Rank = new DevExpress.XtraEditors.TextEdit();
             this.CusName = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -71,11 +72,11 @@
             this.Delete = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mCustomerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusAdd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties)).BeginInit();
@@ -83,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CusID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Point.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -132,7 +134,7 @@
             // gridCustomer
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.gridCustomer, 4);
-            this.gridCustomer.DataSource = this.mCustomerBindingSource;
+            this.gridCustomer.DataSource = this.customersBindingSource;
             this.gridCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridCustomer.Location = new System.Drawing.Point(0, 0);
             this.gridCustomer.MainView = this.gridCustomerView;
@@ -142,10 +144,6 @@
             this.gridCustomer.TabIndex = 0;
             this.gridCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridCustomerView});
-            // 
-            // mCustomerBindingSource
-            // 
-            this.mCustomerBindingSource.DataSource = typeof(Models.MCustomer);
             // 
             // gridCustomerView
             // 
@@ -195,8 +193,8 @@
             // 
             // CusPhone
             // 
-            this.CusPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Phone", true));
-            this.CusPhone.Location = new System.Drawing.Point(2, 350);
+            this.CusPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Phone", true));
+            this.CusPhone.Location = new System.Drawing.Point(2, 328);
             this.CusPhone.Name = "CusPhone";
             this.CusPhone.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.CusPhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
@@ -204,10 +202,14 @@
             this.CusPhone.StyleController = this.layoutControl1;
             this.CusPhone.TabIndex = 7;
             // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(Models.Customers);
+            // 
             // CusAdd
             // 
-            this.CusAdd.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Address", true));
-            this.CusAdd.Location = new System.Drawing.Point(2, 281);
+            this.CusAdd.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Address", true));
+            this.CusAdd.Location = new System.Drawing.Point(2, 258);
             this.CusAdd.Name = "CusAdd";
             this.CusAdd.Properties.Mask.EditMask = "\\p{L}+";
             this.CusAdd.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -217,9 +219,9 @@
             // 
             // CusBirth
             // 
-            this.CusBirth.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Birth", true));
+            this.CusBirth.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Birth", true));
             this.CusBirth.EditValue = null;
-            this.CusBirth.Location = new System.Drawing.Point(2, 202);
+            this.CusBirth.Location = new System.Drawing.Point(2, 177);
             this.CusBirth.Name = "CusBirth";
             this.CusBirth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -237,8 +239,8 @@
             // 
             // CusGender
             // 
-            this.CusGender.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Gender", true));
-            this.CusGender.Location = new System.Drawing.Point(156, 133);
+            this.CusGender.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Gender", true));
+            this.CusGender.Location = new System.Drawing.Point(149, 107);
             this.CusGender.Name = "CusGender";
             this.CusGender.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -247,24 +249,25 @@
             "Female",
             "Male"});
             this.CusGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.CusGender.Size = new System.Drawing.Size(97, 20);
+            this.CusGender.Size = new System.Drawing.Size(104, 20);
             this.CusGender.StyleController = this.layoutControl1;
             this.CusGender.TabIndex = 4;
             // 
             // CusID
             // 
-            this.CusID.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "ID", true));
+            this.CusID.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "CusID", true));
             this.CusID.Enabled = false;
             this.CusID.Location = new System.Drawing.Point(2, 37);
             this.CusID.Name = "CusID";
             this.CusID.Properties.ReadOnly = true;
-            this.CusID.Size = new System.Drawing.Size(97, 20);
+            this.CusID.Size = new System.Drawing.Size(104, 20);
             this.CusID.StyleController = this.layoutControl1;
             this.CusID.TabIndex = 11;
             // 
             // CusMail
             // 
-            this.CusMail.Location = new System.Drawing.Point(2, 419);
+            this.CusMail.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Email", true));
+            this.CusMail.Location = new System.Drawing.Point(2, 398);
             this.CusMail.Name = "CusMail";
             this.CusMail.Properties.Mask.EditMask = "([A-Z|a-z|0-9](\\.|_){0,1})+[A-Z|a-z|0-9]\\@([A-Z|a-z|0-9])+((\\.){0,1}[A-Z|a-z|0-9]" +
     "){2}\\.[a-z]{2,3}";
@@ -275,32 +278,36 @@
             // 
             // Point
             // 
-            this.Point.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Point", true));
+            this.Point.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "Point", true));
             this.Point.Location = new System.Drawing.Point(2, 488);
             this.Point.Name = "Point";
             this.Point.Properties.Mask.EditMask = "f";
             this.Point.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.Point.Properties.ReadOnly = true;
-            this.Point.Size = new System.Drawing.Size(150, 20);
+            this.Point.Size = new System.Drawing.Size(143, 20);
             this.Point.StyleController = this.layoutControl1;
             this.Point.TabIndex = 12;
             // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(Models.Account);
+            // 
             // Rank
             // 
-            this.Rank.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Rank", true));
-            this.Rank.Location = new System.Drawing.Point(156, 488);
+            this.Rank.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountBindingSource, "mRank", true));
+            this.Rank.Location = new System.Drawing.Point(149, 488);
             this.Rank.Name = "Rank";
             this.Rank.Properties.ReadOnly = true;
-            this.Rank.Size = new System.Drawing.Size(97, 20);
+            this.Rank.Size = new System.Drawing.Size(104, 20);
             this.Rank.StyleController = this.layoutControl1;
             this.Rank.TabIndex = 13;
             // 
             // CusName
             // 
-            this.CusName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.mCustomerBindingSource, "Name", true));
-            this.CusName.Location = new System.Drawing.Point(2, 133);
+            this.CusName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.customersBindingSource, "Name", true));
+            this.CusName.Location = new System.Drawing.Point(2, 107);
             this.CusName.Name = "CusName";
-            this.CusName.Size = new System.Drawing.Size(150, 20);
+            this.CusName.Size = new System.Drawing.Size(143, 20);
             this.CusName.StyleController = this.layoutControl1;
             this.CusName.TabIndex = 10;
             // 
@@ -355,7 +362,7 @@
             this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 451);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(154, 59);
+            this.layoutControlItem1.Size = new System.Drawing.Size(147, 59);
             this.layoutControlItem1.Text = "Point";
             this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(97, 32);
@@ -368,7 +375,7 @@
             this.ID.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ID.ImageOptions.Image")));
             this.ID.Location = new System.Drawing.Point(0, 0);
             this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(101, 59);
+            this.ID.Size = new System.Drawing.Size(108, 59);
             this.ID.Text = "Customer ID";
             this.ID.TextLocation = DevExpress.Utils.Locations.Top;
             this.ID.TextSize = new System.Drawing.Size(97, 32);
@@ -377,9 +384,9 @@
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem1.Location = new System.Drawing.Point(101, 0);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(108, 0);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(154, 59);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(147, 59);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // Name
@@ -388,9 +395,9 @@
             this.Name.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Name.CustomizationFormText = "Name";
             this.Name.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Name.ImageOptions.Image")));
-            this.Name.Location = new System.Drawing.Point(0, 96);
+            this.Name.Location = new System.Drawing.Point(0, 70);
             this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(154, 59);
+            this.Name.Size = new System.Drawing.Size(147, 59);
             this.Name.TextLocation = DevExpress.Utils.Locations.Top;
             this.Name.TextSize = new System.Drawing.Size(97, 32);
             // 
@@ -400,10 +407,10 @@
             this.Gender.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Gender.CustomizationFormText = "Gender";
             this.Gender.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Gender.ImageOptions.Image")));
-            this.Gender.Location = new System.Drawing.Point(154, 96);
+            this.Gender.Location = new System.Drawing.Point(147, 70);
             this.Gender.Name = "Gender";
             this.Gender.OptionsTableLayoutItem.RowIndex = 1;
-            this.Gender.Size = new System.Drawing.Size(101, 59);
+            this.Gender.Size = new System.Drawing.Size(108, 59);
             this.Gender.TextLocation = DevExpress.Utils.Locations.Top;
             this.Gender.TextSize = new System.Drawing.Size(97, 32);
             // 
@@ -413,7 +420,7 @@
             this.Address.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Address.CustomizationFormText = "Address";
             this.Address.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Address.ImageOptions.Image")));
-            this.Address.Location = new System.Drawing.Point(0, 244);
+            this.Address.Location = new System.Drawing.Point(0, 221);
             this.Address.Name = "Address";
             this.Address.OptionsTableLayoutItem.RowIndex = 3;
             this.Address.Size = new System.Drawing.Size(255, 59);
@@ -426,7 +433,7 @@
             this.Birthday.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Birthday.CustomizationFormText = "Birthday";
             this.Birthday.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Birthday.ImageOptions.Image")));
-            this.Birthday.Location = new System.Drawing.Point(0, 165);
+            this.Birthday.Location = new System.Drawing.Point(0, 140);
             this.Birthday.Name = "Birthday";
             this.Birthday.OptionsTableLayoutItem.RowIndex = 2;
             this.Birthday.Size = new System.Drawing.Size(255, 59);
@@ -439,7 +446,7 @@
             this.Phone.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Phone.CustomizationFormText = "Phone";
             this.Phone.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Phone.ImageOptions.Image")));
-            this.Phone.Location = new System.Drawing.Point(0, 313);
+            this.Phone.Location = new System.Drawing.Point(0, 291);
             this.Phone.Name = "Phone";
             this.Phone.OptionsTableLayoutItem.RowIndex = 4;
             this.Phone.Size = new System.Drawing.Size(255, 59);
@@ -452,7 +459,7 @@
             this.Email.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.Email.CustomizationFormText = "Email";
             this.Email.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Email.ImageOptions.Image")));
-            this.Email.Location = new System.Drawing.Point(0, 382);
+            this.Email.Location = new System.Drawing.Point(0, 361);
             this.Email.Name = "Email";
             this.Email.OptionsTableLayoutItem.RowIndex = 5;
             this.Email.Size = new System.Drawing.Size(255, 59);
@@ -466,9 +473,9 @@
             this.layoutControlItem2.CustomizationFormText = "Rank";
             this.layoutControlItem2.Enabled = false;
             this.layoutControlItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem2.ImageOptions.Image")));
-            this.layoutControlItem2.Location = new System.Drawing.Point(154, 451);
+            this.layoutControlItem2.Location = new System.Drawing.Point(147, 451);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(101, 59);
+            this.layoutControlItem2.Size = new System.Drawing.Size(108, 59);
             this.layoutControlItem2.Text = "Rank";
             this.layoutControlItem2.TextLocation = DevExpress.Utils.Locations.Top;
             this.layoutControlItem2.TextSize = new System.Drawing.Size(97, 32);
@@ -478,55 +485,55 @@
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 59);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(255, 37);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 155);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 129);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 224);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 199);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 234);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 210);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem6
             // 
             this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 303);
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 280);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 372);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(0, 350);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem7.Size = new System.Drawing.Size(255, 11);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 441);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(0, 420);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(255, 10);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(255, 31);
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
             // 
             // controlNavigator1
@@ -592,11 +599,11 @@
             this.Text = "Customer";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mCustomerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusAdd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties)).EndInit();
@@ -604,6 +611,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CusID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Point.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -659,7 +667,6 @@
         private DevExpress.XtraLayout.LayoutControlItem Name;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraEditors.ControlNavigator controlNavigator1;
-        private System.Windows.Forms.BindingSource mCustomerBindingSource;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
@@ -670,5 +677,7 @@
         private DevExpress.XtraEditors.SimpleButton New;
         private DevExpress.XtraEditors.SimpleButton Update;
         private DevExpress.XtraEditors.SimpleButton Delete;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private System.Windows.Forms.BindingSource accountBindingSource;
     }
 }
