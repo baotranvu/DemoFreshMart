@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="99ab43917386421b94dbb367adf78919" Name="Diagram1">
-        <EntityTypeShape EntityType="SuperMarketModel.Account" Width="1.5" PointX="6" PointY="13.125" />
-        <EntityTypeShape EntityType="SuperMarketModel.Customers" Width="1.5" PointX="3.75" PointY="8.625" />
-        <EntityTypeShape EntityType="SuperMarketModel.Employees" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="SuperMarketModel.Invoices" Width="1.5" PointX="6" PointY="4.875" />
-        <EntityTypeShape EntityType="SuperMarketModel.Orders" Width="1.5" PointX="3" PointY="4.75" />
-        <EntityTypeShape EntityType="SuperMarketModel.Products" Width="1.5" PointX="6" PointY="8.5" />
-        <EntityTypeShape EntityType="SuperMarketModel.Providers" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SuperMarketModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" />
-        <EntityTypeShape EntityType="SuperMarketModel.Invoice_detail" Width="1.5" PointX="8.25" PointY="5" />
-        <EntityTypeShape EntityType="SuperMarketModel.Order_Detail" Width="1.5" PointX="5.25" PointY="1" />
-        <AssociationConnector Association="SuperMarketModel.FK_Account_Customers" />
-        <AssociationConnector Association="SuperMarketModel.FK_Invoices_Customers" />
-        <AssociationConnector Association="SuperMarketModel.FK_Invoices_Employees" />
-        <AssociationConnector Association="SuperMarketModel.FK_Orders_Employees" />
-        <AssociationConnector Association="SuperMarketModel.FK_Invoice_detail_Invoices" />
-        <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Orders" />
-        <AssociationConnector Association="SuperMarketModel.FK_Orders_Providers" />
-        <AssociationConnector Association="SuperMarketModel.FK_Invoice_detail_Products" />
-        <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Products" />
+      <Diagram DiagramId="fbb7639bc6b84a88a3ca04ad20674114" Name="Diagram1">
+        <EntityTypeShape EntityType="Models.Account" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Customers" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Employees" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Invoices" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Orders" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Products" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Providers" Width="1.5" PointX="3.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.sysdiagrams" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Invoice_detail" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Order_Detail" Width="1.5" PointX="11.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK_Account_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Invoices_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Invoices_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Orders_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Invoice_detail_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Order_Detail_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Orders_Providers" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Invoice_detail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK_Order_Detail_Products" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

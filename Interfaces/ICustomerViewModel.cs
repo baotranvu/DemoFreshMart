@@ -8,12 +8,12 @@ namespace Interfaces
         BindingSource CustomerBindingSource { get; set; }
         string Title { get; }
         event PropertyChangedEventHandler PropertyChanged;
-        void Initialize();
+        void Dispose();
         void New();
         void Delete();
         void Save();
         void Load();
-        void ShowDetail(IDetailView detail);
+       
       
     }
 }

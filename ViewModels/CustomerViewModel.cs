@@ -1,26 +1,22 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Windows.Forms;
 using Interfaces;
+using Models;
+
+
+
 
 
 namespace ViewModels
 {
     public class CustomerViewModel : INotifyPropertyChanged, ICustomerViewModel
-    {   
+    {
+        private SuperMarketEntities db;
+        public CustomerViewModel() => db = new SuperMarketEntities();
+        public BindingSource CustomerBindingSource { get; set; }
         
-        public BindingSource CustomerBindingSource
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public string Title
         {
@@ -34,18 +30,10 @@ namespace ViewModels
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            CustomerBindingSource.RemoveCurrent();
         }
 
-        public void Initialize()
-        {
-            
-                CustomerBindingSource.CurrentChanged += delegate { Notify("Title"); };
-             
-
-                
-            
-        }
+        
 
         private void Notify(string v)
         {
@@ -54,24 +42,26 @@ namespace ViewModels
 
         public void Load()
         {
-
+            db.Customers.Load();
+            CustomerBindingSource.DataSource = db.Customers.Local.ToBindingList();
             
-            throw new NotImplementedException();
         }
 
         public void New()
         {
-            throw new NotImplementedException();
+            CustomerBindingSource.AddNew();
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            CustomerBindingSource.EndEdit();
+            db.SaveChanges();
+            
         }
-        public void ShowDetail(IDetailView detail)
+
+        public void Dispose()
         {
-            detail.BindingSource.DataSource = CustomerBindingSource.Current;
-            detail.ShowModal();
+            CustomerBindingSource.Dispose();
         }
     }
 }

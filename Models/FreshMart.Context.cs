@@ -12,12 +12,11 @@ namespace Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-   
-
-    public partial class ConnectionString : DbContext
+    
+    public partial class SuperMarketEntities : DbContext
     {
-        public ConnectionString()
-            : base("name=ConnectionString")
+        public SuperMarketEntities()
+            : base("SuperMarketEntities")
         {
         }
     
