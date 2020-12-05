@@ -12,7 +12,8 @@ namespace Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+   
+
     public partial class ConnectionString : DbContext
     {
         public ConnectionString()
@@ -25,13 +26,14 @@ namespace Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Account> Account { get; set; }
         public DbSet<Customers> Customers { get; set; }
         public DbSet<Employees> Employees { get; set; }
         public DbSet<Invoices> Invoices { get; set; }
         public DbSet<Orders> Orders { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Providers> Providers { get; set; }
-        public DbSet<Account> Account { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Invoice_detail> Invoice_detail { get; set; }
         public DbSet<Order_Detail> Order_Detail { get; set; }
     }

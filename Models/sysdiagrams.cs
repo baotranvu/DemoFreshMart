@@ -12,15 +12,12 @@ namespace Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Invoice_detail
+    public partial class sysdiagrams
     {
-        public string InvID { get; set; }
-        public string SKU { get; set; }
-        public decimal Quantity { get; set; }
-        public decimal Amount { get; set; }
-        public decimal Total { get; set; }
-    
-        public virtual Invoices Invoices { get; set; }
-        public virtual Products Products { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

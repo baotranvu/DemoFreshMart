@@ -14,6 +14,12 @@ namespace Models
     
     public partial class Products
     {
+        public Products()
+        {
+            this.Invoice_detail = new HashSet<Invoice_detail>();
+            this.Order_Detail = new HashSet<Order_Detail>();
+        }
+    
         public int SKUInt { get; set; }
         public string SKU { get; set; }
         public string Product { get; set; }
@@ -24,5 +30,8 @@ namespace Models
         public Nullable<System.DateTime> EXP { get; set; }
         public decimal InStock { get; set; }
         public Nullable<decimal> Discount { get; set; }
+    
+        public virtual ICollection<Invoice_detail> Invoice_detail { get; set; }
+        public virtual ICollection<Order_Detail> Order_Detail { get; set; }
     }
 }

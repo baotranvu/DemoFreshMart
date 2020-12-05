@@ -26,6 +26,8 @@ namespace Models
         public System.DateTime Orddate { get; set; }
         public decimal Total { get; set; }
     
+        public virtual Employees Employees { get; set; }
         public virtual ICollection<Order_Detail> Order_Detail { get; set; }
+        public virtual Providers Providers { get; set; }
     }
 }

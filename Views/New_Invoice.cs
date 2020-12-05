@@ -58,8 +58,7 @@ namespace Views
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            New_Customer cus = new New_Customer();
-            cus.ShowDialog();
+            
         }
     }
 }

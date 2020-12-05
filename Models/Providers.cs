@@ -14,6 +14,11 @@ namespace Models
     
     public partial class Providers
     {
+        public Providers()
+        {
+            this.Orders = new HashSet<Orders>();
+        }
+    
         public int ProIntID { get; set; }
         public string ProID { get; set; }
         public string Name { get; set; }
@@ -22,5 +27,7 @@ namespace Models
         public string Email { get; set; }
         public string Bank { get; set; }
         public string Account { get; set; }
+    
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

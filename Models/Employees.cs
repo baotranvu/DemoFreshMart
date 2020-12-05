@@ -17,6 +17,7 @@ namespace Models
         public Employees()
         {
             this.Invoices = new HashSet<Invoices>();
+            this.Orders = new HashSet<Orders>();
         }
     
         public int EmpIntID { get; set; }
@@ -28,5 +29,6 @@ namespace Models
         public string Phone { get; set; }
     
         public virtual ICollection<Invoices> Invoices { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

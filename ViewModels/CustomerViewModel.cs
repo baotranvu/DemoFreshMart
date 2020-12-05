@@ -3,10 +3,12 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using Interfaces;
 
+
 namespace ViewModels
 {
     public class CustomerViewModel : INotifyPropertyChanged, ICustomerViewModel
-    {
+    {   
+        
         public BindingSource CustomerBindingSource
         {
             get
@@ -52,6 +54,8 @@ namespace ViewModels
 
         public void Load()
         {
+
+            
             throw new NotImplementedException();
         }
 

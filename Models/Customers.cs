@@ -16,7 +16,7 @@ namespace Models
     {
         public Customers()
         {
-            this.Account = new HashSet<Account>();
+            this.Invoices = new HashSet<Invoices>();
         }
     
         public int CusIntID { get; set; }
@@ -28,6 +28,7 @@ namespace Models
         public string Phone { get; set; }
         public string Email { get; set; }
     
-        public virtual ICollection<Account> Account { get; set; }
+        public virtual Account Account { get; set; }
+        public virtual ICollection<Invoices> Invoices { get; set; }
     }
 }

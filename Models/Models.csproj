@@ -102,6 +102,9 @@
     <Compile Include="Providers.cs">
       <DependentUpon>FreshMart.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>FreshMart.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -111,8 +114,8 @@
     </EntityDeploy>
     <None Include="FreshMart.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FreshMart.Context.cs</LastGenOutput>
       <DependentUpon>FreshMart.edmx</DependentUpon>
+      <LastGenOutput>FreshMart.Context.cs</LastGenOutput>
     </None>
     <None Include="FreshMart.edmx.diagram">
       <DependentUpon>FreshMart.edmx</DependentUpon>
@@ -133,9 +136,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Properties\DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

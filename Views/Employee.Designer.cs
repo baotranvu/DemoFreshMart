@@ -63,7 +63,7 @@
             this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            this.mEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployeeView)).BeginInit();
@@ -93,7 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mEmployeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,7 +116,7 @@
             // 
             // gridEmployee
             // 
-            this.gridEmployee.DataSource = this.mEmployeeBindingSource;
+            this.gridEmployee.DataSource = this.employeesBindingSource;
             this.gridEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridEmployee.Location = new System.Drawing.Point(0, 0);
             this.gridEmployee.MainView = this.gridEmployeeView;
@@ -231,6 +231,7 @@
             // 
             // EmpID
             // 
+            this.EmpID.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "EmpIntID", true));
             this.EmpID.Enabled = false;
             this.EmpID.Location = new System.Drawing.Point(0, 35);
             this.EmpID.Name = "EmpID";
@@ -501,9 +502,9 @@
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
-            // mEmployeeBindingSource
+            // employeesBindingSource
             // 
-           
+            this.employeesBindingSource.DataSource = typeof(Models.Employees);
             // 
             // Employee
             // 
@@ -542,7 +543,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mEmployeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -582,6 +583,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private System.Windows.Forms.BindingSource mEmployeeBindingSource;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
     }
 }

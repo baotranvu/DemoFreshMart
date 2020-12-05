@@ -32,19 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridCustomer = new DevExpress.XtraGrid.GridControl();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridCustomerView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CusIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CusNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.CusPhone = new DevExpress.XtraEditors.TextEdit();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.CusAdd = new DevExpress.XtraEditors.TextEdit();
             this.CusBirth = new DevExpress.XtraEditors.DateEdit();
             this.CusGender = new DevExpress.XtraEditors.ComboBoxEdit();
             this.CusID = new DevExpress.XtraEditors.TextEdit();
             this.CusMail = new DevExpress.XtraEditors.TextEdit();
             this.Point = new DevExpress.XtraEditors.TextEdit();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Rank = new DevExpress.XtraEditors.TextEdit();
             this.CusName = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -70,13 +69,14 @@
             this.New = new DevExpress.XtraEditors.SimpleButton();
             this.Update = new DevExpress.XtraEditors.SimpleButton();
             this.Delete = new DevExpress.XtraEditors.SimpleButton();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusAdd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties)).BeginInit();
@@ -84,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CusID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusMail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Point.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
@@ -106,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -144,6 +144,10 @@
             this.gridCustomer.TabIndex = 0;
             this.gridCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridCustomerView});
+            // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataSource = typeof(Models.Customers);
             // 
             // gridCustomerView
             // 
@@ -201,10 +205,6 @@
             this.CusPhone.Size = new System.Drawing.Size(251, 20);
             this.CusPhone.StyleController = this.layoutControl1;
             this.CusPhone.TabIndex = 7;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataSource = typeof(Models.Customers);
             // 
             // CusAdd
             // 
@@ -287,10 +287,6 @@
             this.Point.Size = new System.Drawing.Size(143, 20);
             this.Point.StyleController = this.layoutControl1;
             this.Point.TabIndex = 12;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataSource = typeof(Models.Account);
             // 
             // Rank
             // 
@@ -584,10 +580,14 @@
             this.Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.Image")));
             this.Delete.Location = new System.Drawing.Point(180, 480);
             this.Delete.Margin = new System.Windows.Forms.Padding(0);
-            this.Delete.Name = "Delete";
+          
             this.Delete.Size = new System.Drawing.Size(108, 30);
             this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataSource = typeof(Models.Account);
             // 
             // Customer
             // 
@@ -595,15 +595,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 510);
             this.Controls.Add(this.tableLayoutPanel1);
-            
+           
             this.Text = "Customer";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusAdd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusBirth.Properties)).EndInit();
@@ -611,7 +611,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CusID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusMail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Point.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Rank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CusName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
@@ -633,6 +632,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
