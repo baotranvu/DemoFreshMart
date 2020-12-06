@@ -1,13 +1,10 @@
-﻿using System;
+﻿
 using System.ComponentModel;
 using System.Data.Entity;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Interfaces;
 using Models;
-
-
-
-
 
 namespace ViewModels
 {
@@ -36,11 +33,11 @@ namespace ViewModels
             CustomerBindingSource.EndEdit();
         }
 
-        
 
-        private void Notify(string v)
+
+        private void Notify([CallerMemberName] string property = "")
         {
-            throw new NotImplementedException();
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
         public void Load()
