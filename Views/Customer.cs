@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Windows.Forms;
+﻿
 using Interfaces;
 using Unity;
 using ViewModels;
@@ -16,11 +15,12 @@ namespace Views
             InitializeComponent();
             vm = new CustomerViewModel();
             vm.CustomerBindingSource = customersBindingSource;
+            vm.Initializze();
             this.Load += delegate { vm.Load(); };
             this.Delete.Click += delegate { vm.Delete(); };
             this.Update.Click += delegate { vm.Update(); };
             this.FormClosing += delegate { vm.Dispose(); };
-            DataBindings.Add("Text", vm, "Title");
+           
 
         }
 

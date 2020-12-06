@@ -8,6 +8,7 @@ namespace Interfaces
         BindingSource CustomerBindingSource { get; set; }
         string Title { get; }
         event PropertyChangedEventHandler PropertyChanged;
+        void Initializze();
         void Dispose();
         void Delete();
         void Update();

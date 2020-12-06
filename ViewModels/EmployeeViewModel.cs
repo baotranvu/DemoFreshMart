@@ -2,7 +2,8 @@
 using System.ComponentModel;
 using System.Windows.Forms;
 using Models;
-using System;
+using DevExpress.XtraEditors;
+using System.Data.Entity;
 
 namespace ViewModels
 {
@@ -16,7 +17,11 @@ namespace ViewModels
         {
             get
             {
-                throw new NotImplementedException();
+                
+            
+                    if (EmployeeBindingSource.Current == null) return "Employees";
+                    return $"Employee - {(EmployeeBindingSource?.Current as Employees)?.Name}";
+                
             }
         }
 
@@ -24,21 +29,26 @@ namespace ViewModels
 
         public void Delete()
         {
-            throw new System.NotImplementedException();
+            EmployeeBindingSource.RemoveCurrent();
+            db.SaveChanges();
+            EmployeeBindingSource.EndEdit();
         }
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            EmployeeBindingSource.Dispose();
         }
 
         public void Load()
         {
-            throw new System.NotImplementedException();
+            db.Employees.Load();
+            EmployeeBindingSource.DataSource = db.Employees.Local.ToBindingList();
         }
         public void Update()
         {
-            throw new NotImplementedException();
+            EmployeeBindingSource.EndEdit();
+            db.SaveChanges();
+            XtraMessageBox.Show("Done!");
         }
     }
 }

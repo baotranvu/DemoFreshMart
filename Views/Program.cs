@@ -10,9 +10,10 @@ namespace Views
     static class Config
     {
         public static UnityContainer Container { get; private set; } = new UnityContainer();
-        public static void CustomerRegister()
+        public static void Register()
         {
             Container.RegisterType<ICustomerViewModel, CustomerViewModel>();
+            Container.RegisterType<IEmployeeViewModel, EmployeeViewModel>();
         }
     }
     static class Program
@@ -23,7 +24,7 @@ namespace Views
         [STAThread]
         static void Main()
         {
-            Config.CustomerRegister();
+            Config.Register();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());

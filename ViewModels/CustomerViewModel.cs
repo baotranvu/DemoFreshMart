@@ -5,6 +5,8 @@ using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Interfaces;
 using Models;
+using DevExpress.XtraEditors;
+
 
 namespace ViewModels
 {
@@ -28,6 +30,8 @@ namespace ViewModels
 
         public void Delete()
         {
+           
+            
             CustomerBindingSource.RemoveCurrent();
             db.SaveChanges();
             CustomerBindingSource.EndEdit();
@@ -45,6 +49,7 @@ namespace ViewModels
             db.Customers.Load();
             CustomerBindingSource.DataSource = db.Customers.Local.ToBindingList();
             
+            
         }
 
         
@@ -53,12 +58,18 @@ namespace ViewModels
         {
             CustomerBindingSource.EndEdit();
             db.SaveChanges();
-            
+            XtraMessageBox.Show("Done!");
+
         }
 
         public void Dispose()
         {
             CustomerBindingSource.Dispose();
+        }
+
+        public void Initializze()
+        {
+            CustomerBindingSource.CurrentChanged += delegate { Notify("Title"); };
         }
     }
 }
