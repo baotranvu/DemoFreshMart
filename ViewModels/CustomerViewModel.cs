@@ -22,7 +22,8 @@ namespace ViewModels
         {
             get
             {
-                throw new NotImplementedException();
+                if (CustomerBindingSource.Current == null) return "Customers";
+                return $"Customer - {(CustomerBindingSource?.Current as Customers)?.Name}";
             }
         }
 
@@ -31,6 +32,8 @@ namespace ViewModels
         public void Delete()
         {
             CustomerBindingSource.RemoveCurrent();
+            db.SaveChanges();
+            CustomerBindingSource.EndEdit();
         }
 
         
@@ -47,12 +50,9 @@ namespace ViewModels
             
         }
 
-        public void New()
-        {
-            CustomerBindingSource.AddNew();
-        }
+        
 
-        public void Save()
+        public void Update()
         {
             CustomerBindingSource.EndEdit();
             db.SaveChanges();

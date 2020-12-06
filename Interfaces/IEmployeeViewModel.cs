@@ -1,18 +1,16 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
-
 namespace Interfaces
 {
-    public interface ICustomerViewModel
+    public interface IEmployeeViewModel
     {
-        BindingSource CustomerBindingSource { get; set; }
+        BindingSource EmployeeBindingSource { get; set; }
         string Title { get; }
         event PropertyChangedEventHandler PropertyChanged;
         void Dispose();
         void Delete();
         void Update();
         void Load();
-       
-      
+
     }
 }

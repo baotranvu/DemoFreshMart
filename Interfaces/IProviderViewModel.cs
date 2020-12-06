@@ -3,16 +3,16 @@ using System.Windows.Forms;
 
 namespace Interfaces
 {
-    public interface ICustomerViewModel
+    public interface IProviderViewModel
     {
-        BindingSource CustomerBindingSource { get; set; }
+        BindingSource ProviderBindingSource { get; set; }
         string Title { get; }
         event PropertyChangedEventHandler PropertyChanged;
         void Dispose();
+        void New();
         void Delete();
-        void Update();
+        void Save();
         void Load();
-       
-      
+
     }
 }

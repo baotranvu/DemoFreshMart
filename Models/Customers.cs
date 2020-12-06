@@ -9,24 +9,29 @@
 
 namespace Models
 {
-    using System;
+   
     using System.Collections.Generic;
-    
-    public partial class Customers
+    using Framework;
+    public partial class Customers :Bindable
     {
-        public Customers()
+        public Customers() 
         {
             this.Invoices = new HashSet<Invoices>();
         }
-    
+        private string _Gender;
+        private string _Name;
+        private System.DateTime _Birth;
+        private string _Address;
+        private string _Phone;
+        private string _Email;
         public int CusIntID { get; set; }
         public string CusID { get; set; }
-        public string Name { get; set; }
-        public string Gender { get; set; }
-        public System.DateTime Birth { get; set; }
-        public string Address { get; set; }
-        public string Phone { get; set; }
-        public string Email { get; set; }
+        public string Name { get =>_Name; set => Set(ref _Name,value); }
+        public string Gender { get => _Gender; set => Set(ref _Gender,value); }
+        public System.DateTime Birth { get => _Birth; set => Set(ref _Birth,value); }
+        public string Address { get => _Address ; set => Set(ref _Address,value); }
+        public string Phone { get => _Phone; set => Set(ref _Phone,value); }
+        public string Email { get => _Email; set => Set(ref _Email,value); }
     
         public virtual Account Account { get; set; }
         public virtual ICollection<Invoices> Invoices { get; set; }

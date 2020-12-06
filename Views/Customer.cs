@@ -17,15 +17,18 @@ namespace Views
             vm = new CustomerViewModel();
             vm.CustomerBindingSource = customersBindingSource;
             this.Load += delegate { vm.Load(); };
-            this.New.Click += delegate { vm.New(); };
             this.Delete.Click += delegate { vm.Delete(); };
-            this.Update.Click += delegate { vm.Save(); };
+            this.Update.Click += delegate { vm.Update(); };
             this.FormClosing += delegate { vm.Dispose(); };
-            
+            DataBindings.Add("Text", vm, "Title");
+
         }
 
-       
+        private void New_Click(object sender, System.EventArgs e)
+        {
+            New_Customer new_Customer = new New_Customer();
+            new_Customer.ShowDialog();
 
-        
+        }
     }
 }

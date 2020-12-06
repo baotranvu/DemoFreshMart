@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ICustomerViewModel.cs" />
+    <Compile Include="IEmployeeViewModel.cs" />
+    <Compile Include="IProviderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
