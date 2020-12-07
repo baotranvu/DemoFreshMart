@@ -10,11 +10,11 @@ using ViewModels;
 namespace Views
 {
 
-    public partial class Employee : DevExpress.XtraEditors.XtraForm
+    public partial class Employees : DevExpress.XtraEditors.XtraForm
     {
         private IEmployeeViewModel _vm = Config.Container.Resolve<IEmployeeViewModel>();
         private EmployeeViewModel vm;
-        public Employee()
+        public Employees()
         {
             InitializeComponent();
             vm = new EmployeeViewModel();
@@ -25,6 +25,11 @@ namespace Views
             DataBindings.Add("Text", vm, "Title");
 
 
+        }
+
+        private void New_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

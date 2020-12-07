@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridProduct = new DevExpress.XtraGrid.GridControl();
+            this.mProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridProductView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.SKUCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProductCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,9 +71,9 @@
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            this.mProductBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mProductBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -108,7 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProductBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -620,20 +620,17 @@
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
-            // mProductBindingSource
-            // 
-            
-            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 510);
             this.Controls.Add(this.tableLayoutPanel1);
-            
-            this.Text = "Product";
+           
+            this.Text = "Product form";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mProductBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -669,7 +666,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProductBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -1,6 +1,6 @@
 ﻿namespace Views
 {
-    partial class Employee
+    partial class Employees
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridEmployee = new DevExpress.XtraGrid.GridControl();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridEmployeeView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.EmpIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,9 +65,9 @@
             this.Delete = new DevExpress.XtraEditors.SimpleButton();
             this.Update = new DevExpress.XtraEditors.SimpleButton();
             this.New = new DevExpress.XtraEditors.SimpleButton();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployeeView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -91,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -102,6 +102,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.gridEmployee, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.layoutControl1, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.controlNavigator1, 3, 1);
@@ -130,6 +131,10 @@
             this.gridEmployee.TabIndex = 0;
             this.gridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridEmployeeView});
+            // 
+            // employeesBindingSource
+            // 
+            this.employeesBindingSource.DataSource = typeof(Models.Employees);
             // 
             // gridEmployeeView
             // 
@@ -512,21 +517,19 @@
             this.New.Size = new System.Drawing.Size(95, 30);
             this.New.TabIndex = 5;
             this.New.Text = "New ";
+            this.New.Click += new System.EventHandler(this.New_Click);
             // 
-            // employeesBindingSource
-            // 
-            this.employeesBindingSource.DataSource = typeof(Models.Employees);
-            // 
-            // Employee
+            // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 510);
             this.Controls.Add(this.tableLayoutPanel1);
             
-            this.Text = "Employee";
+            this.Text = "Employee form";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridEmployeeView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -551,7 +554,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

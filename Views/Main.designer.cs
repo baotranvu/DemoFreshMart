@@ -396,7 +396,7 @@
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.Name = "Main";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "Main";
+            this.Text = "Main menu";
             this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();

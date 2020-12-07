@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice));
             this.Inv = new DevExpress.XtraGrid.GridControl();
+            this.mInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.InvID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InvDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Inv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mInvoiceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Inv
@@ -90,10 +90,6 @@
             this.EmpID.Visible = true;
             this.EmpID.VisibleIndex = 1;
             // 
-            // mInvoiceBindingSource
-            // 
-           
-            // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,11 +97,11 @@
             this.ClientSize = new System.Drawing.Size(727, 283);
             this.Controls.Add(this.Inv);
             this.Name = "Invoice";
-            this.Text = "Invoice";
+            this.Text = "Invoice form";
             this.Load += new System.EventHandler(this.Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Inv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mInvoiceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

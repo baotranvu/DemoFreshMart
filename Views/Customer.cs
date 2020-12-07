@@ -1,16 +1,16 @@
-﻿
+﻿using System;
 using Interfaces;
 using Unity;
 using ViewModels;
 
 namespace Views
 {
-    public partial class Customer : DevExpress.XtraEditors.XtraForm
+    public partial class Customers : DevExpress.XtraEditors.XtraForm
     {
         
         private ICustomerViewModel _vm = Config.Container.Resolve<ICustomerViewModel>();
         private CustomerViewModel vm;
-        public Customer()
+        public Customers()
         {
             InitializeComponent();
             vm = new CustomerViewModel();
@@ -29,6 +29,11 @@ namespace Views
             New_Customer new_Customer = new New_Customer();
             new_Customer.ShowDialog();
 
+        }
+
+        private void simpleButton1_Click(object sender, System.EventArgs e)
+        {
+            vm.Clear(Root);
         }
     }
 }

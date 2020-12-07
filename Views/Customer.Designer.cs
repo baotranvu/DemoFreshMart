@@ -1,6 +1,6 @@
 ﻿namespace Views
 {
-    partial class Customer
+    partial class Customers
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridCustomer = new DevExpress.XtraGrid.GridControl();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -121,6 +121,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.gridCustomer, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.layoutControl1, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.controlNavigator1, 3, 1);
@@ -132,7 +133,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1170, 510);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -145,7 +146,7 @@
             this.gridCustomer.MainView = this.gridCustomerView;
             this.gridCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.gridCustomer.Name = "gridCustomer";
-            this.gridCustomer.Size = new System.Drawing.Size(702, 480);
+            this.gridCustomer.Size = new System.Drawing.Size(702, 482);
             this.gridCustomer.TabIndex = 0;
             this.gridCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridCustomerView});
@@ -605,11 +606,11 @@
             this.controlNavigator1.Buttons.Remove.Enabled = false;
             this.controlNavigator1.Buttons.Remove.Visible = false;
             this.controlNavigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.controlNavigator1.Location = new System.Drawing.Point(351, 480);
+            this.controlNavigator1.Location = new System.Drawing.Point(351, 482);
             this.controlNavigator1.Margin = new System.Windows.Forms.Padding(0);
             this.controlNavigator1.Name = "controlNavigator1";
             this.controlNavigator1.NavigatableControl = this.gridCustomer;
-            this.controlNavigator1.Size = new System.Drawing.Size(351, 30);
+            this.controlNavigator1.Size = new System.Drawing.Size(351, 28);
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
@@ -617,10 +618,10 @@
             // 
             this.New.Dock = System.Windows.Forms.DockStyle.Fill;
             this.New.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("New.ImageOptions.Image")));
-            this.New.Location = new System.Drawing.Point(0, 480);
+            this.New.Location = new System.Drawing.Point(0, 482);
             this.New.Margin = new System.Windows.Forms.Padding(0);
             this.New.Name = "New";
-            this.New.Size = new System.Drawing.Size(117, 30);
+            this.New.Size = new System.Drawing.Size(117, 28);
             this.New.TabIndex = 3;
             this.New.Text = "New";
             this.New.Click += new System.EventHandler(this.New_Click);
@@ -629,10 +630,10 @@
             // 
             this.Update.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Update.ImageOptions.Image")));
-            this.Update.Location = new System.Drawing.Point(117, 480);
+            this.Update.Location = new System.Drawing.Point(117, 482);
             this.Update.Margin = new System.Windows.Forms.Padding(0);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(117, 30);
+            this.Update.Size = new System.Drawing.Size(117, 28);
             this.Update.TabIndex = 4;
             this.Update.Text = "Update";
             // 
@@ -640,21 +641,21 @@
             // 
             this.Delete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.Image")));
-            this.Delete.Location = new System.Drawing.Point(234, 480);
+            this.Delete.Location = new System.Drawing.Point(234, 482);
             this.Delete.Margin = new System.Windows.Forms.Padding(0);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(117, 30);
+            this.Delete.Size = new System.Drawing.Size(117, 28);
             this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
             // 
-            // Customer
+            // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 510);
             this.Controls.Add(this.tableLayoutPanel1);
             
-            this.Text = "Customer";
+            this.Text = "Customer form";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();

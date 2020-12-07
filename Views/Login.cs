@@ -1,15 +1,9 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using System.Data.Entity;
 using System.Data.SqlClient;
-
 
 namespace Views
 {
@@ -23,11 +17,10 @@ namespace Views
 
         private void signIn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Main main_form = new Main();
-            main_form.ShowDialog();
-            this.Close();
-          
+            Connect connect = new Connect();        
+            name = user_edt.Text;
+            connect.ConnectToServer(user_edt.Text, pass_edt.Text, this);
+
         }
     }
 

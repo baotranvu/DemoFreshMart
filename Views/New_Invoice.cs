@@ -44,7 +44,7 @@ namespace Views
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Customer cus = new Customer();
+            Customers cus = new Customers();
             cus.ShowDialog();
         }
 

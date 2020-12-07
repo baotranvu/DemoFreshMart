@@ -117,7 +117,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textEdit1);
             this.Name = "Invoice_detal";
-            this.Text = "Invoice_Detail";
+            this.Text = "Invoice_Detail form";
             this.Load += new System.EventHandler(this.Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

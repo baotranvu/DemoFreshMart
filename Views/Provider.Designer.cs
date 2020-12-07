@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Provider));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridProvider = new DevExpress.XtraGrid.GridControl();
+            this.mProviderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridProviderView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ProIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,9 +67,9 @@
             this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            this.mProviderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProviderView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -98,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -525,20 +525,17 @@
             this.controlNavigator1.TabIndex = 2;
             this.controlNavigator1.Text = "controlNavigator1";
             // 
-            // mProviderBindingSource
-            // 
-            
-            // 
             // Provider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 510);
             this.Controls.Add(this.tableLayoutPanel1);
-            
-            this.Text = "Provider";
+           
+            this.Text = "Provider form";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProviderView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -568,7 +565,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

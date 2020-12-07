@@ -46,12 +46,7 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.Total = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Product = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Quantity = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,7 +54,12 @@
             this.Amount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Unit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SKU = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.Total = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantity_txt.Properties)).BeginInit();
@@ -78,13 +78,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Total.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -299,6 +299,77 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 505);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(177, 3);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(606, 344);
+            this.gridControl1.TabIndex = 1;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.Product,
+            this.Quantity,
+            this.UnitPrice,
+            this.Amount,
+            this.Unit,
+            this.SKU});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // Product
+            // 
+            this.Product.FieldName = "Product";
+            this.Product.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Product.ImageOptions.Image")));
+            this.Product.Name = "Product";
+            this.Product.Visible = true;
+            this.Product.VisibleIndex = 1;
+            // 
+            // Quantity
+            // 
+            this.Quantity.FieldName = "Quantity";
+            this.Quantity.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Quantity.ImageOptions.Image")));
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Visible = true;
+            this.Quantity.VisibleIndex = 2;
+            // 
+            // UnitPrice
+            // 
+            this.UnitPrice.FieldName = "UnitPrice";
+            this.UnitPrice.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("UnitPrice.ImageOptions.Image")));
+            this.UnitPrice.Name = "UnitPrice";
+            this.UnitPrice.Visible = true;
+            this.UnitPrice.VisibleIndex = 4;
+            // 
+            // Amount
+            // 
+            this.Amount.FieldName = "Amount";
+            this.Amount.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Amount.ImageOptions.Image")));
+            this.Amount.Name = "Amount";
+            this.Amount.Visible = true;
+            this.Amount.VisibleIndex = 5;
+            // 
+            // Unit
+            // 
+            this.Unit.FieldName = "Unit";
+            this.Unit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Unit.ImageOptions.Image")));
+            this.Unit.Name = "Unit";
+            this.Unit.Visible = true;
+            this.Unit.VisibleIndex = 3;
+            // 
+            // SKU
+            // 
+            this.SKU.FieldName = "SKU";
+            this.SKU.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SKU.ImageOptions.Image")));
+            this.SKU.Name = "SKU";
+            this.SKU.Visible = true;
+            this.SKU.VisibleIndex = 0;
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -367,77 +438,6 @@
             this.layoutControlItem6.TextSize = new System.Drawing.Size(24, 13);
             this.layoutControlItem6.TextToControlDistance = 5;
             // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.Product,
-            this.Quantity,
-            this.UnitPrice,
-            this.Amount,
-            this.Unit,
-            this.SKU});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // Product
-            // 
-            this.Product.FieldName = "Product";
-            this.Product.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Product.ImageOptions.Image")));
-            this.Product.Name = "Product";
-            this.Product.Visible = true;
-            this.Product.VisibleIndex = 1;
-            // 
-            // Quantity
-            // 
-            this.Quantity.FieldName = "Quantity";
-            this.Quantity.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Quantity.ImageOptions.Image")));
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Visible = true;
-            this.Quantity.VisibleIndex = 2;
-            // 
-            // UnitPrice
-            // 
-            this.UnitPrice.FieldName = "UnitPrice";
-            this.UnitPrice.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("UnitPrice.ImageOptions.Image")));
-            this.UnitPrice.Name = "UnitPrice";
-            this.UnitPrice.Visible = true;
-            this.UnitPrice.VisibleIndex = 4;
-            // 
-            // Amount
-            // 
-            this.Amount.FieldName = "Amount";
-            this.Amount.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Amount.ImageOptions.Image")));
-            this.Amount.Name = "Amount";
-            this.Amount.Visible = true;
-            this.Amount.VisibleIndex = 5;
-            // 
-            // Unit
-            // 
-            this.Unit.FieldName = "Unit";
-            this.Unit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Unit.ImageOptions.Image")));
-            this.Unit.Name = "Unit";
-            this.Unit.Visible = true;
-            this.Unit.VisibleIndex = 3;
-            // 
-            // SKU
-            // 
-            this.SKU.FieldName = "SKU";
-            this.SKU.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("SKU.ImageOptions.Image")));
-            this.SKU.Name = "SKU";
-            this.SKU.Visible = true;
-            this.SKU.VisibleIndex = 0;
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(177, 3);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(606, 344);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            // 
             // New_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,7 +445,7 @@
             this.ClientSize = new System.Drawing.Size(786, 505);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "New_Order";
-            this.Text = "New_Order";
+            this.Text = "New_Order form";
             this.Load += new System.EventHandler(this.New_Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -465,13 +465,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Total.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oder));
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.mOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.OrdID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrdDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Total = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.mOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -106,10 +106,6 @@
             this.Total.Visible = true;
             this.Total.VisibleIndex = 4;
             // 
-            // mOrderBindingSource
-            // 
-           
-            // 
             // Oder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,11 +113,11 @@
             this.ClientSize = new System.Drawing.Size(687, 403);
             this.Controls.Add(this.gridControl1);
             this.Name = "Oder";
-            this.Text = "Oder";
+            this.Text = "Oder form";
             this.Load += new System.EventHandler(this.Oder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
