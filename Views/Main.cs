@@ -88,5 +88,10 @@ namespace Views
             
             
         }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

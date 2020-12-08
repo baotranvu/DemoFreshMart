@@ -22,14 +22,15 @@ namespace Views
             this.Load += delegate { vm.Load(); };
             this.Update.Click += delegate { vm.Update(); };
             this.Delete.Click += delegate { vm.Delete(); };
-            DataBindings.Add("Text", vm, "Title");
+            
 
 
         }
 
         private void New_Click(object sender, EventArgs e)
         {
-            
+            New_Employee new_Employee = new New_Employee();
+            new_Employee.ShowDialog();
         }
     }
 }

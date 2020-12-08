@@ -15,7 +15,7 @@ namespace Views
             InitializeComponent();
             vm = new CustomerViewModel();
             vm.CustomerBindingSource = customersBindingSource;
-            vm.Initializze();
+            
             this.Load += delegate { vm.Load(); };
             this.Delete.Click += delegate { vm.Delete(); };
             this.Update.Click += delegate { vm.Update(); };
@@ -31,9 +31,6 @@ namespace Views
 
         }
 
-        private void simpleButton1_Click(object sender, System.EventArgs e)
-        {
-            vm.Clear(Root);
-        }
+        
     }
 }

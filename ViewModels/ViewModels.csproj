@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="CustomerViewModel.cs" />
     <Compile Include="EmployeeViewModel.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

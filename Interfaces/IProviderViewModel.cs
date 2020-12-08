@@ -9,9 +9,8 @@ namespace Interfaces
         string Title { get; }
         event PropertyChangedEventHandler PropertyChanged;
         void Dispose();
-        void New();
         void Delete();
-        void Save();
+        void Update();
         void Load();
 
     }

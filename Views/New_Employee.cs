@@ -1,23 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 using ViewModels;
 using DevExpress.XtraEditors;
 
-
 namespace Views
 {
-    public partial class New_Customer : DevExpress.XtraEditors.XtraForm
+    public partial class New_Employee : DevExpress.XtraEditors.XtraForm
     {
-
-        private CustomerViewModel vm = new CustomerViewModel();
-        public New_Customer()
+        private EmployeeViewModel vm = new EmployeeViewModel();
+        public New_Employee()
         {
             InitializeComponent();
-            
-            
-
         }
 
-        private void saveButton_Click(object sender, EventArgs e)
+        private void Create_Click(object sender, EventArgs e)
         {
             if (Password.Text.Equals(Confirm.Text))
             {
@@ -26,24 +22,16 @@ namespace Views
                 DateTime birth = DateTime.Parse(Date.Text);
                 string address = Address.Text;
                 string phone = Phone.Text;
-                string mail = Mail.Text;
-                vm.AddAsync(name, gender, birth, address, phone, mail, Password.Text);
+                vm.AddAsync(name, gender, birth, address, phone, Password.Text);
             }
             else
             {
                 XtraMessageBox.Show("password doesn't match!");
                 Confirm.Focus();
             }
-            
-                
-           
-                
-        }
-
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            Functions func = new Functions();
-            func.Clear(Root);
         }
     }
+       
+
+        
 }

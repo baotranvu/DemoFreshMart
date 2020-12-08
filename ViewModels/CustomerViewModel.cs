@@ -17,58 +17,44 @@ namespace ViewModels
         private SuperMarketEntities db;
         public CustomerViewModel() => db = new SuperMarketEntities();
         public BindingSource CustomerBindingSource { get; set; }
-        
 
-        public string Title
-        {
-            get
-            {
-                if (CustomerBindingSource.Current == null) return "Customers";
-                return $"Customer - {(CustomerBindingSource?.Current as Customers)?.Name}";
-            }
-        }
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void Delete()
         {
-            var token = new CancellationTokenSource();
-           
 
-                CustomerBindingSource.RemoveCurrent();
-                db.SaveChanges();
-                CustomerBindingSource.EndEdit();
-            
-
+            CustomerBindingSource.RemoveCurrent();
+            db.SaveChanges();
+            CustomerBindingSource.EndEdit();
         }
 
 
 
-        private void Notify([CallerMemberName] string property = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
-        }
+
 
         public void Load()
         {
             db.Customers.Load();
             CustomerBindingSource.DataSource = db.Customers.Local.ToBindingList();
-            
-            
+
+
         }
 
-        
+
 
         public void Update()
         {
-           
 
-                CustomerBindingSource.EndEdit();
-                db.SaveChanges();
-                Load();
-                XtraMessageBox.Show("Done!");
-                
-           
+
+            CustomerBindingSource.EndEdit();
+            db.SaveChanges();
+            Load();
+            XtraMessageBox.Show("Done!");
+
+
 
 
         }
@@ -76,21 +62,18 @@ namespace ViewModels
         public void Dispose()
         {
             CustomerBindingSource.Dispose();
-            
+
         }
 
-        public void Initializze()
-        {
-            CustomerBindingSource.CurrentChanged += delegate { Notify("Title"); };
-        }
 
-        public async void AddAsync(string name, string gender, System.DateTime birth, string address, string phone, string mail ,string temp )
+
+        public async void AddAsync(string name, string gender, System.DateTime birth, string address, string phone, string mail, string temp)
         {
 
             try
             {
                 db = new SuperMarketEntities();
-                int x = db.Database.ExecuteSqlCommand("dbo.sp_AddCustomer {0},{1},{2},{3},{4},{5},{6}",name, gender, birth, address, phone, mail, temp);
+                int x = db.Database.ExecuteSqlCommand("dbo.sp_AddCustomer {0},{1},{2},{3},{4},{5},{6}", name, gender, birth, address, phone, mail, temp);
                 if (x != 0)
                 {
                     XtraMessageBox.Show("Done!");
@@ -99,38 +82,18 @@ namespace ViewModels
                 {
                     XtraMessageBox.Show("False!");
                 }
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
-                XtraMessageBox.Show("Error!,try again."+""+e.Source);
+                XtraMessageBox.Show("Error!,try again." + "" + e.Source);
             }
-            }
-           
-              
-                
-
-           
-        
-
-        public void Clear(LayoutControlGroup layoutControl)
-        {
-            DevExpress.XtraLayout.Utils.LayoutGroupItemCollection items = layoutControl.Items;
-            foreach (BaseLayoutItem item in items)
-            {
-                LayoutControlItem edt = item as LayoutControlItem;
-                TextEdit textEdit = edt.Control as TextEdit;
-                if( textEdit != null)
-                {
-                    textEdit.Text = string.Empty;
-                }
-                else
-                {
-                    continue;
-                }
-                
-            }
-
-
-
         }
+
+
+
+
+
+
     }
+        
 }

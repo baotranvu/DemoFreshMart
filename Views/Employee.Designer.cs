@@ -151,7 +151,7 @@
             // 
             // EmpIDCol
             // 
-            this.EmpIDCol.FieldName = "ID";
+            this.EmpIDCol.FieldName = "EmpID";
             this.EmpIDCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("EmpIDCol.ImageOptions.Image")));
             this.EmpIDCol.Name = "EmpIDCol";
             this.EmpIDCol.Visible = true;
@@ -178,7 +178,7 @@
             // 
             // BirthCol
             // 
-            this.BirthCol.FieldName = "Birth";
+            this.BirthCol.FieldName = "Date";
             this.BirthCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BirthCol.ImageOptions.Image")));
             this.BirthCol.Name = "BirthCol";
             this.BirthCol.Visible = true;
@@ -224,6 +224,7 @@
             // 
             // EmpPhone
             // 
+            this.EmpPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.employeesBindingSource, "Phone", true));
             this.EmpPhone.Location = new System.Drawing.Point(2, 437);
             this.EmpPhone.Name = "EmpPhone";
             this.EmpPhone.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
