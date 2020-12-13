@@ -17,10 +17,6 @@ namespace ViewModels
         private SuperMarketEntities db;
         public CustomerViewModel() => db = new SuperMarketEntities();
         public BindingSource CustomerBindingSource { get; set; }
-
-
-
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void Delete()
@@ -31,10 +27,6 @@ namespace ViewModels
             CustomerBindingSource.EndEdit();
         }
 
-
-
-
-
         public void Load()
         {
             db.Customers.Load();
@@ -43,20 +35,12 @@ namespace ViewModels
 
         }
 
-
-
         public void Update()
         {
-
-
             CustomerBindingSource.EndEdit();
             db.SaveChanges();
             Load();
             XtraMessageBox.Show("Done!");
-
-
-
-
         }
 
         public void Dispose()
@@ -67,7 +51,7 @@ namespace ViewModels
 
 
 
-        public async void AddAsync(string name, string gender, System.DateTime birth, string address, string phone, string mail, string temp)
+        public void Add(string name, string gender, System.DateTime birth, string address, string phone, string mail, string temp)
         {
 
             try

@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
+using Interfaces;
+using Unity;
+using ViewModels;
 
 namespace Views
 {
     public partial class Provider : DevExpress.XtraEditors.XtraForm
     {
+        private ProviderViewModel vm;
         public Provider()
         {
             InitializeComponent();
+            vm = new ProviderViewModel();
+            vm.ProviderBindingSource = providersBindingSource;
+            this.Load += delegate { vm.Load(); };
         }
     }
 }

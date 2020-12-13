@@ -36,10 +36,21 @@
             this.accordionEmployee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator3 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionProvider = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlSeparator20 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionAuthentication = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionUser = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionRole = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionFunction = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator10 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionDocument = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator5 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlSeparator4 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator8 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlSeparator16 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlSeparator9 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionControlSeparator7 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionInvoice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionNewInvoice = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -59,11 +70,7 @@
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlSeparator16 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlSeparator8 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
-            this.accordionControlSeparator9 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accordionFunctionTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormContainer1.SuspendLayout();
@@ -74,7 +81,6 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionPerson,
-            this.accordionControlSeparator1,
             this.accordionDocument,
             this.accordionControlSeparator7,
             this.accordionInvoice,
@@ -95,7 +101,10 @@
             this.accordionControlSeparator2,
             this.accordionEmployee,
             this.accordionControlSeparator3,
-            this.accordionProvider});
+            this.accordionProvider,
+            this.accordionControlSeparator20,
+            this.accordionUsers,
+            this.accordionControlSeparator10});
             this.accordionPerson.Expanded = true;
             this.accordionPerson.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionPerson.ImageOptions.Image")));
             this.accordionPerson.Name = "accordionPerson";
@@ -133,9 +142,57 @@
             this.accordionProvider.Text = "Providers";
             this.accordionProvider.Click += new System.EventHandler(this.accordionProvider_Click);
             // 
-            // accordionControlSeparator1
+            // accordionControlSeparator20
             // 
-            this.accordionControlSeparator1.Name = "accordionControlSeparator1";
+            this.accordionControlSeparator20.Name = "accordionControlSeparator20";
+            // 
+            // accordionUsers
+            // 
+            this.accordionUsers.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionAuthentication,
+            this.accordionUser,
+            this.accordionRole,
+            this.accordionFunction});
+            this.accordionUsers.Expanded = true;
+            this.accordionUsers.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionUsers.ImageOptions.Image")));
+            this.accordionUsers.Name = "accordionUsers";
+            this.accordionUsers.Text = "Users";
+            // 
+            // accordionAuthentication
+            // 
+            this.accordionAuthentication.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionAuthentication.ImageOptions.Image")));
+            this.accordionAuthentication.Name = "accordionAuthentication";
+            this.accordionAuthentication.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionAuthentication.Text = "Authentication";
+            this.accordionAuthentication.Click += new System.EventHandler(this.accordionAuthentication_Click);
+            // 
+            // accordionUser
+            // 
+            this.accordionUser.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionUser.ImageOptions.Image")));
+            this.accordionUser.Name = "accordionUser";
+            this.accordionUser.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionUser.Text = "User";
+            this.accordionUser.Click += new System.EventHandler(this.accordionUserTab_Click);
+            // 
+            // accordionRole
+            // 
+            this.accordionRole.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionRole.ImageOptions.Image")));
+            this.accordionRole.Name = "accordionRole";
+            this.accordionRole.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionRole.Text = "Role";
+            this.accordionRole.Click += new System.EventHandler(this.accordionRole_Click);
+            // 
+            // accordionFunction
+            // 
+            this.accordionFunction.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionFunction.ImageOptions.Image")));
+            this.accordionFunction.Name = "accordionFunction";
+            this.accordionFunction.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionFunction.Text = "Function";
+            this.accordionFunction.Click += new System.EventHandler(this.accordionFunction_Click);
+            // 
+            // accordionControlSeparator10
+            // 
+            this.accordionControlSeparator10.Name = "accordionControlSeparator10";
             // 
             // accordionDocument
             // 
@@ -159,6 +216,33 @@
             // accordionControlSeparator4
             // 
             this.accordionControlSeparator4.Name = "accordionControlSeparator4";
+            // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "Config Log";
+            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
+            // 
+            // accordionControlSeparator8
+            // 
+            this.accordionControlSeparator8.Name = "accordionControlSeparator8";
+            // 
+            // accordionControlSeparator16
+            // 
+            this.accordionControlSeparator16.Name = "accordionControlSeparator16";
+            // 
+            // accordionControlElement2
+            // 
+            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
+            this.accordionControlElement2.Name = "accordionControlElement2";
+            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement2.Text = "Report";
+            // 
+            // accordionControlSeparator9
+            // 
+            this.accordionControlSeparator9.Name = "accordionControlSeparator9";
             // 
             // accordionControlSeparator7
             // 
@@ -312,32 +396,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(520, 400);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // accordionControlElement1
+            // accordionFunctionTab
             // 
-            this.accordionControlElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement1.ImageOptions.Image")));
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement1.Text = "Config Log";
-            this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
-            // 
-            // accordionControlSeparator16
-            // 
-            this.accordionControlSeparator16.Name = "accordionControlSeparator16";
-            // 
-            // accordionControlElement2
-            // 
-            this.accordionControlElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement2.ImageOptions.Image")));
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement2.Text = "Report";
-            // 
-            // accordionControlSeparator8
-            // 
-            this.accordionControlSeparator8.Name = "accordionControlSeparator8";
-            // 
-            // accordionControlSeparator9
-            // 
-            this.accordionControlSeparator9.Name = "accordionControlSeparator9";
+            this.accordionFunctionTab.Name = "accordionFunctionTab";
+            this.accordionFunctionTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionFunctionTab.Text = "Function";
             // 
             // Main
             // 
@@ -371,7 +434,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionEmployee;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator3;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionProvider;
-        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionDocument;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator5;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
@@ -398,5 +460,13 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator8;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionUsers;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionFunctionTab;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator20;
+        private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator10;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionAuthentication;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionUser;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionRole;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionFunction;
     }
 }

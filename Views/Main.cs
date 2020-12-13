@@ -93,5 +93,37 @@ namespace Views
         {
 
         }
+
+        private void accordionUserTab_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.ShowDialog();
+        }
+
+        private void accordionRole_Click(object sender, EventArgs e)
+        {
+            Role role = new Role();
+            role.ShowDialog();
+        }
+
+        private void accordionFunction_Click(object sender, EventArgs e)
+        {
+            Function function = new Function();
+            function.ShowDialog();
+        }
+
+        private void accordionAuthentication_Click(object sender, EventArgs e)
+        {
+            Authentication authentication = new Authentication();
+            authentication.ShowDialog();
+
+        }
+
+        private void accordionControlElement6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

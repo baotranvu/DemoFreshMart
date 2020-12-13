@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c096c548963c4c62af61cf8661db7127" Name="Diagram1">
+        <EntityTypeShape EntityType="SuperMarketModel.Account" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Customers" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Employees" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Functions" Width="1.5" PointX="1.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Invoices" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Orders" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Products" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Providers" Width="1.5" PointX="3.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Roles" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Users" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Invoice_detail" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SuperMarketModel.Order_Detail" Width="1.5" PointX="11.25" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="SuperMarketModel.FK_Account_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoices_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoices_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Orders_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Users_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoice_detail_Invoices" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Orders_Providers" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Invoice_detail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.FunctionRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="SuperMarketModel.UserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

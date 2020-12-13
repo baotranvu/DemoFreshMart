@@ -12,12 +12,17 @@ namespace Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Functions
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public Functions()
+        {
+            this.Roles = new HashSet<Roles>();
+        }
+    
+        public int FunctionId { get; set; }
+        public string FormName { get; set; }
+        public string FunctionName { get; set; }
+    
+        public virtual ICollection<Roles> Roles { get; set; }
     }
 }

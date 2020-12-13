@@ -31,16 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customers));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gridCustomer = new DevExpress.XtraGrid.GridControl();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridCustomerView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.CusIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CusNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.CusPhone = new DevExpress.XtraEditors.TextEdit();
             this.CusAdd = new DevExpress.XtraEditors.TextEdit();
@@ -75,10 +66,12 @@
             this.New = new DevExpress.XtraEditors.SimpleButton();
             this.Update = new DevExpress.XtraEditors.SimpleButton();
             this.Delete = new DevExpress.XtraEditors.SimpleButton();
+            this.gridCustomerView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.CusIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CusNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridCustomer = new DevExpress.XtraGrid.GridControl();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).BeginInit();
@@ -111,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -137,99 +132,9 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1170, 510);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // gridCustomer
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.gridCustomer, 4);
-            this.gridCustomer.DataSource = this.customersBindingSource;
-            this.gridCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridCustomer.Location = new System.Drawing.Point(0, 0);
-            this.gridCustomer.MainView = this.gridCustomerView;
-            this.gridCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.gridCustomer.Name = "gridCustomer";
-            this.gridCustomer.Size = new System.Drawing.Size(702, 482);
-            this.gridCustomer.TabIndex = 0;
-            this.gridCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridCustomerView});
-            // 
             // customersBindingSource
             // 
             this.customersBindingSource.DataSource = typeof(Models.Customers);
-            // 
-            // gridCustomerView
-            // 
-            this.gridCustomerView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.CusIDCol,
-            this.CusNameCol,
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5});
-            this.gridCustomerView.GridControl = this.gridCustomer;
-            this.gridCustomerView.Name = "gridCustomerView";
-            // 
-            // CusIDCol
-            // 
-            this.CusIDCol.FieldName = "CusID";
-            this.CusIDCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("CusIDCol.ImageOptions.Image")));
-            this.CusIDCol.Name = "CusIDCol";
-            this.CusIDCol.Visible = true;
-            this.CusIDCol.VisibleIndex = 0;
-            this.CusIDCol.Width = 87;
-            // 
-            // CusNameCol
-            // 
-            this.CusNameCol.FieldName = "Name";
-            this.CusNameCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("CusNameCol.ImageOptions.Image")));
-            this.CusNameCol.Name = "CusNameCol";
-            this.CusNameCol.Visible = true;
-            this.CusNameCol.VisibleIndex = 1;
-            this.CusNameCol.Width = 82;
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.FieldName = "Gender";
-            this.gridColumn1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn1.ImageOptions.Image")));
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 90;
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.FieldName = "Birth";
-            this.gridColumn2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn2.ImageOptions.Image")));
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 77;
-            // 
-            // gridColumn3
-            // 
-            this.gridColumn3.FieldName = "Address";
-            this.gridColumn3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn3.ImageOptions.Image")));
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
-            this.gridColumn3.Width = 94;
-            // 
-            // gridColumn4
-            // 
-            this.gridColumn4.FieldName = "Phone";
-            this.gridColumn4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn4.ImageOptions.Image")));
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 5;
-            this.gridColumn4.Width = 85;
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.FieldName = "Email";
-            this.gridColumn5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("gridColumn5.ImageOptions.Image")));
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 79;
             // 
             // layoutControl1
             // 
@@ -648,6 +553,47 @@
             this.Delete.TabIndex = 5;
             this.Delete.Text = "Delete";
             // 
+            // gridCustomerView
+            // 
+            this.gridCustomerView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.CusIDCol,
+            this.CusNameCol});
+            this.gridCustomerView.GridControl = this.gridCustomer;
+            this.gridCustomerView.Name = "gridCustomerView";
+            // 
+            // CusIDCol
+            // 
+            this.CusIDCol.FieldName = "CusID";
+            this.CusIDCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("CusIDCol.ImageOptions.Image")));
+            this.CusIDCol.Name = "CusIDCol";
+            this.CusIDCol.Visible = true;
+            this.CusIDCol.VisibleIndex = 0;
+            this.CusIDCol.Width = 87;
+            // 
+            // CusNameCol
+            // 
+            this.CusNameCol.FieldName = "Name";
+            this.CusNameCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("CusNameCol.ImageOptions.Image")));
+            this.CusNameCol.Name = "CusNameCol";
+            this.CusNameCol.Visible = true;
+            this.CusNameCol.VisibleIndex = 1;
+            this.CusNameCol.Width = 82;
+            // 
+            // gridCustomer
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.gridCustomer, 4);
+            this.gridCustomer.DataSource = this.customersBindingSource;
+            this.gridCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridCustomer.Location = new System.Drawing.Point(0, 0);
+            this.gridCustomer.MainView = this.gridCustomerView;
+            this.gridCustomer.Margin = new System.Windows.Forms.Padding(0);
+            this.gridCustomer.Name = "gridCustomer";
+            this.gridCustomer.Size = new System.Drawing.Size(702, 482);
+            this.gridCustomer.TabIndex = 0;
+            this.gridCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridCustomerView});
+            this.gridCustomer.Click += new System.EventHandler(this.gridCustomer_Click);
+            // 
             // Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,9 +603,7 @@
             
             this.Text = "Customer form";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CusPhone.Properties)).EndInit();
@@ -692,6 +636,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomerView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -732,16 +678,11 @@
         private DevExpress.XtraEditors.SimpleButton New;
         private DevExpress.XtraEditors.SimpleButton Update;
         private DevExpress.XtraEditors.SimpleButton Delete;
+        private System.Windows.Forms.BindingSource customersBindingSource;
+        private System.Windows.Forms.BindingSource accountBindingSource;
         private DevExpress.XtraGrid.GridControl gridCustomer;
         private DevExpress.XtraGrid.Views.Grid.GridView gridCustomerView;
         private DevExpress.XtraGrid.Columns.GridColumn CusIDCol;
         private DevExpress.XtraGrid.Columns.GridColumn CusNameCol;
-        private System.Windows.Forms.BindingSource customersBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private System.Windows.Forms.BindingSource accountBindingSource;
     }
 }

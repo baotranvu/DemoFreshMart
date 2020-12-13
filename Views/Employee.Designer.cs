@@ -36,10 +36,6 @@
             this.gridEmployeeView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.EmpIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GenderCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.BirthCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.AddressCol = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PhoneCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.EmpPhone = new DevExpress.XtraEditors.TextEdit();
             this.EmpAdd = new DevExpress.XtraEditors.TextEdit();
@@ -131,6 +127,7 @@
             this.gridEmployee.TabIndex = 0;
             this.gridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridEmployeeView});
+            this.gridEmployee.Click += new System.EventHandler(this.gridEmployee_Click);
             // 
             // employeesBindingSource
             // 
@@ -140,11 +137,7 @@
             // 
             this.gridEmployeeView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.EmpIDCol,
-            this.EmpNameCol,
-            this.GenderCol,
-            this.BirthCol,
-            this.AddressCol,
-            this.PhoneCol});
+            this.EmpNameCol});
             this.gridEmployeeView.GridControl = this.gridEmployee;
             this.gridEmployeeView.Name = "gridEmployeeView";
             this.gridEmployeeView.OptionsBehavior.Editable = false;
@@ -166,42 +159,6 @@
             this.EmpNameCol.Visible = true;
             this.EmpNameCol.VisibleIndex = 1;
             this.EmpNameCol.Width = 93;
-            // 
-            // GenderCol
-            // 
-            this.GenderCol.FieldName = "Gender";
-            this.GenderCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("GenderCol.ImageOptions.Image")));
-            this.GenderCol.Name = "GenderCol";
-            this.GenderCol.Visible = true;
-            this.GenderCol.VisibleIndex = 2;
-            this.GenderCol.Width = 81;
-            // 
-            // BirthCol
-            // 
-            this.BirthCol.FieldName = "Date";
-            this.BirthCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BirthCol.ImageOptions.Image")));
-            this.BirthCol.Name = "BirthCol";
-            this.BirthCol.Visible = true;
-            this.BirthCol.VisibleIndex = 3;
-            this.BirthCol.Width = 81;
-            // 
-            // AddressCol
-            // 
-            this.AddressCol.FieldName = "Address";
-            this.AddressCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("AddressCol.ImageOptions.Image")));
-            this.AddressCol.Name = "AddressCol";
-            this.AddressCol.Visible = true;
-            this.AddressCol.VisibleIndex = 4;
-            this.AddressCol.Width = 90;
-            // 
-            // PhoneCol
-            // 
-            this.PhoneCol.FieldName = "Phone";
-            this.PhoneCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("PhoneCol.ImageOptions.Image")));
-            this.PhoneCol.Name = "PhoneCol";
-            this.PhoneCol.Visible = true;
-            this.PhoneCol.VisibleIndex = 5;
-            this.PhoneCol.Width = 130;
             // 
             // layoutControl1
             // 
@@ -588,13 +545,9 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private DevExpress.XtraGrid.Columns.GridColumn GenderCol;
-        private DevExpress.XtraGrid.Columns.GridColumn BirthCol;
-        private DevExpress.XtraGrid.Columns.GridColumn AddressCol;
         private DevExpress.XtraEditors.SimpleButton Delete;
         private DevExpress.XtraEditors.SimpleButton Update;
         private DevExpress.XtraEditors.SimpleButton New;
-        private DevExpress.XtraGrid.Columns.GridColumn PhoneCol;
         private System.Windows.Forms.BindingSource employeesBindingSource;
     }
 }

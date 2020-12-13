@@ -32,5 +32,10 @@ namespace Views
             New_Employee new_Employee = new New_Employee();
             new_Employee.ShowDialog();
         }
+
+        private void gridEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

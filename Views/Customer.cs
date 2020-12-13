@@ -8,7 +8,7 @@ namespace Views
     public partial class Customers : DevExpress.XtraEditors.XtraForm
     {
         
-        private ICustomerViewModel _vm = Config.Container.Resolve<ICustomerViewModel>();
+        
         private CustomerViewModel vm;
         public Customers()
         {
@@ -31,6 +31,9 @@ namespace Views
 
         }
 
-        
+        private void gridCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

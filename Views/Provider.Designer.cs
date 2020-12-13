@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Provider));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gridProvider = new DevExpress.XtraGrid.GridControl();
-            this.mProviderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.providersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridProviderView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ProIDCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProNameCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -69,7 +69,7 @@
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProviderView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
@@ -121,7 +121,7 @@
             // 
             // gridProvider
             // 
-            this.gridProvider.DataSource = this.mProviderBindingSource;
+            this.gridProvider.DataSource = this.providersBindingSource;
             this.gridProvider.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridProvider.Location = new System.Drawing.Point(0, 0);
             this.gridProvider.MainView = this.gridProviderView;
@@ -131,6 +131,10 @@
             this.gridProvider.TabIndex = 0;
             this.gridProvider.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridProviderView});
+            // 
+            // providersBindingSource
+            // 
+            this.providersBindingSource.DataSource = typeof(Models.Providers);
             // 
             // gridProviderView
             // 
@@ -142,7 +146,7 @@
             // 
             // ProIDCol
             // 
-            this.ProIDCol.FieldName = "ID";
+            this.ProIDCol.FieldName = "ProID";
             this.ProIDCol.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("ProIDCol.ImageOptions.Image")));
             this.ProIDCol.Name = "ProIDCol";
             this.ProIDCol.Visible = true;
@@ -181,7 +185,8 @@
             // 
             // ProPhone
             // 
-            this.ProPhone.Location = new System.Drawing.Point(2, 244);
+            this.ProPhone.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Phone", true));
+            this.ProPhone.Location = new System.Drawing.Point(2, 243);
             this.ProPhone.Name = "ProPhone";
             this.ProPhone.Properties.Mask.EditMask = "(\\d?\\d?\\d?) \\d\\d\\d-\\d\\d\\d\\d";
             this.ProPhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
@@ -191,7 +196,8 @@
             // 
             // ProAdd
             // 
-            this.ProAdd.Location = new System.Drawing.Point(2, 175);
+            this.ProAdd.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Address", true));
+            this.ProAdd.Location = new System.Drawing.Point(2, 174);
             this.ProAdd.Name = "ProAdd";
             this.ProAdd.Properties.Mask.EditMask = "\\p{L}+";
             this.ProAdd.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -201,8 +207,9 @@
             // 
             // ProID
             // 
+            this.ProID.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "ProID", true));
             this.ProID.Enabled = false;
-            this.ProID.Location = new System.Drawing.Point(2, 37);
+            this.ProID.Location = new System.Drawing.Point(2, 36);
             this.ProID.Name = "ProID";
             this.ProID.Properties.ReadOnly = true;
             this.ProID.Size = new System.Drawing.Size(132, 20);
@@ -211,7 +218,8 @@
             // 
             // ProMail
             // 
-            this.ProMail.Location = new System.Drawing.Point(0, 311);
+            this.ProMail.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Email", true));
+            this.ProMail.Location = new System.Drawing.Point(0, 310);
             this.ProMail.Name = "ProMail";
             this.ProMail.Properties.Mask.EditMask = "([A-Z|a-z|0-9](\\.|_){0,1})+[A-Z|a-z|0-9]\\@([A-Z|a-z|0-9])+((\\.){0,1}[A-Z|a-z|0-9]" +
     "){2}\\.[a-z]{2,3}";
@@ -222,7 +230,8 @@
             // 
             // Bank
             // 
-            this.Bank.Location = new System.Drawing.Point(2, 378);
+            this.Bank.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Bank", true));
+            this.Bank.Location = new System.Drawing.Point(2, 377);
             this.Bank.Name = "Bank";
             this.Bank.Properties.Mask.EditMask = "f";
             this.Bank.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -232,7 +241,8 @@
             // 
             // Account
             // 
-            this.Account.Location = new System.Drawing.Point(2, 447);
+            this.Account.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Account", true));
+            this.Account.Location = new System.Drawing.Point(2, 446);
             this.Account.Name = "Account";
             this.Account.Size = new System.Drawing.Size(269, 20);
             this.Account.StyleController = this.layoutControl1;
@@ -241,7 +251,7 @@
             // Update
             // 
             this.Update.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Update.ImageOptions.Image")));
-            this.Update.Location = new System.Drawing.Point(93, 471);
+            this.Update.Location = new System.Drawing.Point(93, 470);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(87, 38);
             this.Update.StyleController = this.layoutControl1;
@@ -251,7 +261,7 @@
             // Delete
             // 
             this.Delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Delete.ImageOptions.Image")));
-            this.Delete.Location = new System.Drawing.Point(184, 471);
+            this.Delete.Location = new System.Drawing.Point(184, 470);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(87, 38);
             this.Delete.StyleController = this.layoutControl1;
@@ -260,7 +270,8 @@
             // 
             // ProName
             // 
-            this.ProName.Location = new System.Drawing.Point(2, 106);
+            this.ProName.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.providersBindingSource, "Name", true));
+            this.ProName.Location = new System.Drawing.Point(2, 105);
             this.ProName.Name = "ProName";
             this.ProName.Size = new System.Drawing.Size(269, 20);
             this.ProName.StyleController = this.layoutControl1;
@@ -269,7 +280,7 @@
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(2, 471);
+            this.simpleButton1.Location = new System.Drawing.Point(2, 470);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(87, 38);
             this.simpleButton1.StyleController = this.layoutControl1;
@@ -531,11 +542,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 510);
             this.Controls.Add(this.tableLayoutPanel1);
-           
+            
             this.Text = "Provider form";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mProviderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.providersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProviderView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
@@ -607,6 +618,6 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private System.Windows.Forms.BindingSource mProviderBindingSource;
+        private System.Windows.Forms.BindingSource providersBindingSource;
     }
 }

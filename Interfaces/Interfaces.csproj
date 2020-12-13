@@ -56,9 +56,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAuthViewModel.cs" />
     <Compile Include="ICustomerViewModel.cs" />
     <Compile Include="IEmployeeViewModel.cs" />
+    <Compile Include="IFunctionViewModel.cs" />
+    <Compile Include="IInvoiceViewModel.cs" />
+    <Compile Include="IOrderViewModel.cs" />
+    <Compile Include="IProductViewModel.cs" />
     <Compile Include="IProviderViewModel.cs" />
+    <Compile Include="IRoleViewModel.cs" />
+    <Compile Include="IUserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

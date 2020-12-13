@@ -100,7 +100,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connect.cs" />
+    <Compile Include="Authentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication.Designer.cs">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +117,12 @@
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Function.Designer.cs">
+      <DependentUpon>Function.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
       <SubType>Form</SubType>
@@ -187,11 +198,29 @@
     <Compile Include="Provider.Designer.cs">
       <DependentUpon>Provider.cs</DependentUpon>
     </Compile>
+    <Compile Include="Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role.Designer.cs">
+      <DependentUpon>Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Authentication.resx">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Function.resx">
+      <DependentUpon>Function.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
@@ -239,16 +268,25 @@
     <EmbeddedResource Include="Provider.resx">
       <DependentUpon>Provider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Role.resx">
+      <DependentUpon>Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Models.Account.datasource" />
     <None Include="Properties\DataSources\Models.Customers.datasource" />
     <None Include="Properties\DataSources\Models.Employees.datasource" />
+    <None Include="Properties\DataSources\Models.Functions.datasource" />
     <None Include="Properties\DataSources\Models.Invoices.datasource" />
     <None Include="Properties\DataSources\Models.Invoice_detail.datasource" />
     <None Include="Properties\DataSources\Models.Orders.datasource" />
     <None Include="Properties\DataSources\Models.Order_Detail.datasource" />
     <None Include="Properties\DataSources\Models.Products.datasource" />
     <None Include="Properties\DataSources\Models.Providers.datasource" />
+    <None Include="Properties\DataSources\Models.Roles.datasource" />
+    <None Include="Properties\DataSources\Models.Users.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

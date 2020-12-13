@@ -6,12 +6,13 @@ namespace Interfaces
     public interface IProviderViewModel
     {
         BindingSource ProviderBindingSource { get; set; }
-        string Title { get; }
+        
         event PropertyChangedEventHandler PropertyChanged;
         void Dispose();
         void Delete();
         void Update();
         void Load();
+        void AddAsync(string name, string address, string phone, string mail,string bank,string account);
 
     }
 }

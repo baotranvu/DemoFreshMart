@@ -16,6 +16,14 @@ namespace Views
         {
             Container.RegisterType<ICustomerViewModel, CustomerViewModel>();
             Container.RegisterType<IEmployeeViewModel, EmployeeViewModel>();
+            Container.RegisterType<IProviderViewModel, ProviderViewModel>();
+            Container.RegisterType<IProductViewModel, ProductViewModel>();
+            Container.RegisterType<IInvoiceViewModel, InvoiceViewModel>();
+            Container.RegisterType<IOrderViewModel, OderViewModel>();
+            Container.RegisterType<IUserViewModel, UserViewModel>();
+            Container.RegisterType<IRoleViewModel, RoleViewModel>();
+            Container.RegisterType<IFunctionViewModel, FunctionViewModel>();
+            Container.RegisterType<IAuthViewModel, AuthViewModel>();     
         }
     }
    

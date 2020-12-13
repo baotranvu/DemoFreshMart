@@ -27,7 +27,7 @@ namespace Views
                 string address = Address.Text;
                 string phone = Phone.Text;
                 string mail = Mail.Text;
-                vm.AddAsync(name, gender, birth, address, phone, mail, Password.Text);
+                vm.Add(name, gender, birth, address, phone, mail, Password.Text);
             }
             else
             {

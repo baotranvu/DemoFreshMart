@@ -30,5 +30,6 @@ namespace Models
     
         public virtual ICollection<Invoices> Invoices { get; set; }
         public virtual ICollection<Orders> Orders { get; set; }
+        public virtual Users Users { get; set; }
     }
 }
