@@ -29,6 +29,7 @@
         <AssociationConnector Association="SuperMarketModel.FK_Order_Detail_Products" ManuallyRouted="false" />
         <AssociationConnector Association="SuperMarketModel.FunctionRoles" ManuallyRouted="false" />
         <AssociationConnector Association="SuperMarketModel.UserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SuperMarketModel.Invoice" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

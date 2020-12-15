@@ -172,6 +172,18 @@
     <Compile Include="New_Order.designer.cs">
       <DependentUpon>New_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="New_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Product.designer.cs">
+      <DependentUpon>New_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_Provider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Provider.designer.cs">
+      <DependentUpon>New_Provider.cs</DependentUpon>
+    </Compile>
     <Compile Include="Oder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +258,12 @@
     <EmbeddedResource Include="New_Order.resx">
       <DependentUpon>New_Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="New_Product.resx">
+      <DependentUpon>New_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Provider.resx">
+      <DependentUpon>New_Provider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Oder.resx">
       <DependentUpon>Oder.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +297,7 @@
     <None Include="Properties\DataSources\Models.Customers.datasource" />
     <None Include="Properties\DataSources\Models.Employees.datasource" />
     <None Include="Properties\DataSources\Models.Functions.datasource" />
+    <None Include="Properties\DataSources\Models.Invoice.datasource" />
     <None Include="Properties\DataSources\Models.Invoices.datasource" />
     <None Include="Properties\DataSources\Models.Invoice_detail.datasource" />
     <None Include="Properties\DataSources\Models.Orders.datasource" />

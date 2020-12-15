@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SuperMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SuperMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Account">
           <Key>
             <PropertyRef Name="CusID" />
@@ -161,6 +161,34 @@ warning 6002: The table/view 'SuperMarket.dbo.Order_Detail' does not have a prim
           <Property Name="Password" Type="nvarchar" MaxLength="255" />
           <Property Name="Status" Type="bit" />
           <Property Name="DateCreate" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SuperMarket.dbo.Invoice' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvID" />
+            <PropertyRef Name="EmpName" />
+            <PropertyRef Name="CusName" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Product" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Unit" />
+            <PropertyRef Name="UnitPrice" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="Total" />
+          </Key>
+          <Property Name="InvID" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="EmpName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Product" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Unit" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UnitPrice" Type="smallmoney" Nullable="false" />
+          <Property Name="Quantity" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Amount" Type="smallmoney" Nullable="false" />
+          <Property Name="Total" Type="smallmoney" Nullable="false" />
         </EntityType>
         <Association Name="FK_Account_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
@@ -361,6 +389,21 @@ FROM [dbo].[Invoice_detail] AS [Invoice_detail]</DefiningQuery>
 [Order_Detail].[Amount] AS [Amount]
 FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[Invoice].[InvID] AS [InvID], 
+[Invoice].[EmpName] AS [EmpName], 
+[Invoice].[CusName] AS [CusName], 
+[Invoice].[Date] AS [Date], 
+[Invoice].[Product] AS [Product], 
+[Invoice].[Type] AS [Type], 
+[Invoice].[Unit] AS [Unit], 
+[Invoice].[UnitPrice] AS [UnitPrice], 
+[Invoice].[Quantity] AS [Quantity], 
+[Invoice].[Amount] AS [Amount], 
+[Invoice].[Total] AS [Total]
+FROM [dbo].[Invoice] AS [Invoice]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_Account_Customers" Association="Self.FK_Account_Customers">
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Account" EntitySet="Account" />
@@ -418,8 +461,7 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SuperMarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -773,7 +815,34 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
+          <EntitySet Name="Invoice" EntityType="SuperMarketModel.Invoice" />
         </EntityContainer>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvID" />
+            <PropertyRef Name="EmpName" />
+            <PropertyRef Name="CusName" />
+            <PropertyRef Name="Date" />
+            <PropertyRef Name="Product" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Unit" />
+            <PropertyRef Name="UnitPrice" />
+            <PropertyRef Name="Quantity" />
+            <PropertyRef Name="Amount" />
+            <PropertyRef Name="Total" />
+          </Key>
+          <Property Name="InvID" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="EmpName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CusName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Product" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Unit" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="2" Scale="0" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Total" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -937,6 +1006,23 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
               <ScalarProperty Name="EmpID" ColumnName="EmpID" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="Invoice">
+            <EntityTypeMapping TypeName="SuperMarketModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="CusName" ColumnName="CusName" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="InvID" ColumnName="InvID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

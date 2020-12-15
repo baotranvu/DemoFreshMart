@@ -19,7 +19,7 @@ namespace ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void AddAsync(string name, string gender, DateTime birth, string address, string phone, string pass)
+        public void Add(string name, string gender, DateTime birth, string address, string phone, string pass)
         {
             try
             {

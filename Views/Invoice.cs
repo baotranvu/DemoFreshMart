@@ -20,7 +20,8 @@ namespace App
 
         private void Inv_Click(object sender, EventArgs e)
         {
-            
+            Invoice_detail invoice_Detail = new Invoice_detail();
+            invoice_Detail.ShowDialog();
         }
 
         private void Invoice_Load(object sender, EventArgs e)

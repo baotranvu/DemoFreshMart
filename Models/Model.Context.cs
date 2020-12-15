@@ -37,5 +37,6 @@ namespace Models
         public DbSet<Users> Users { get; set; }
         public DbSet<Invoice_detail> Invoice_detail { get; set; }
         public DbSet<Order_Detail> Order_Detail { get; set; }
+        public DbSet<Invoice> Invoice { get; set; }
     }
 }

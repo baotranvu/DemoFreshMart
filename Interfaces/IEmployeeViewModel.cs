@@ -11,7 +11,7 @@ namespace Interfaces
         void Delete();
         void Update();
         void Load();
-        void AddAsync(string name, string gender, System.DateTime birth, string address, string phone, string pass);
+        void Add(string name, string gender, System.DateTime birth, string address, string phone, string pass);
        
     }
 }

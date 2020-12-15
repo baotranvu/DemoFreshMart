@@ -19,19 +19,39 @@ namespace ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void AddAsync(string name, string address, string phone, string mail, string bank, string account)
+        public void Add(string name, string address, string phone, string mail, string bank, string account)
         {
-            throw new NotImplementedException();
+            try
+            {
+                db = new SuperMarketEntities();
+                int x = db.Database.ExecuteSqlCommand("dbo.sp_AddProvider {0},{1},{2},{3},{4},{5}",name,address,phone,mail,bank,account);
+                if(x!=0)
+                {
+                    XtraMessageBox.Show("Done!");
+                }
+                else
+                {
+                    XtraMessageBox.Show("False!");
+                }
+            }
+            catch(Exception e)
+            {
+                XtraMessageBox.Show(e.Message);
+            }
         }
 
         public void Delete()
         {
-            throw new NotImplementedException();
+            if(XtraMessageBox.Show("Delete?","Warning!",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                db.Providers.Remove(ProviderBindingSource.Current as Providers);
+                ProviderBindingSource.RemoveCurrent();           
+            }
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            ProviderBindingSource.Dispose();
         }
 
         public void Load()
@@ -43,7 +63,8 @@ namespace ViewModels
 
         public void Update()
         {
-            throw new NotImplementedException();
+            ProviderBindingSource.EndEdit();
+            db.SaveChangesAsync();
         }
     }
 }

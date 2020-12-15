@@ -12,7 +12,7 @@ namespace Interfaces
         void Delete();
         void Update();
         void Load();
-        void AddAsync(string name, string address, string phone, string mail,string bank,string account);
+        void Add(string name, string address, string phone, string mail,string bank,string account);
 
     }
 }

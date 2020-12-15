@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice));
             this.Inv = new DevExpress.XtraGrid.GridControl();
-            this.mInvoiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.InvID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InvDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.invoicesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Inv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mInvoiceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Inv
             // 
-            this.Inv.DataSource = this.mInvoiceBindingSource;
+            this.Inv.DataSource = this.invoicesBindingSource;
             this.Inv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Inv.Location = new System.Drawing.Point(0, 0);
             this.Inv.MainView = this.gridView1;
@@ -90,6 +90,10 @@
             this.EmpID.Visible = true;
             this.EmpID.VisibleIndex = 1;
             // 
+            // invoicesBindingSource
+            // 
+            this.invoicesBindingSource.DataSource = typeof(Models.Invoices);
+            // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -100,8 +104,8 @@
             this.Text = "Invoice form";
             this.Load += new System.EventHandler(this.Invoice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Inv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mInvoiceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,6 +117,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn InvID;
         private DevExpress.XtraGrid.Columns.GridColumn InvDate;
         private DevExpress.XtraGrid.Columns.GridColumn EmpID;
-        private System.Windows.Forms.BindingSource mInvoiceBindingSource;
+        private System.Windows.Forms.BindingSource invoicesBindingSource;
     }
 }

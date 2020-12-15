@@ -11,23 +11,20 @@ using DevExpress.XtraEditors;
 
 namespace App
 {
-    public partial class Invoice_detal : DevExpress.XtraEditors.XtraForm
+    public partial class Invoice_detail : Form
     {
-        public Invoice_detal()
+        public Invoice_detail()
         {
             InitializeComponent();
         }
 
         private void Invoice_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'superMarketDataSet2.Invoice' table. You can move, or remove it, as needed.
+            
             
 
         }
 
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

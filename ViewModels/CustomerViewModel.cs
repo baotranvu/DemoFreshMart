@@ -1,13 +1,10 @@
 ﻿
 using System.ComponentModel;
 using System.Data.Entity;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using Interfaces;
 using Models;
 using DevExpress.XtraEditors;
-using DevExpress.XtraLayout;
-using System.Threading;
 using System;
 
 namespace ViewModels
@@ -21,32 +18,30 @@ namespace ViewModels
 
         public void Delete()
         {
-
-            CustomerBindingSource.RemoveCurrent();
-            db.SaveChanges();
-            CustomerBindingSource.EndEdit();
+            if(XtraMessageBox.Show("Delete?","Warning!",MessageBoxButtons.YesNo)==DialogResult.Yes)
+            {
+                db.Customers.Remove(CustomerBindingSource.Current as Customers);
+                CustomerBindingSource.RemoveCurrent();
+            }
+            
         }
 
         public void Load()
         {
             db.Customers.Load();
             CustomerBindingSource.DataSource = db.Customers.Local.ToBindingList();
-
-
         }
 
         public void Update()
         {
             CustomerBindingSource.EndEdit();
-            db.SaveChanges();
-            Load();
-            XtraMessageBox.Show("Done!");
+            db.SaveChangesAsync();      
+            
         }
 
         public void Dispose()
         {
             CustomerBindingSource.Dispose();
-
         }
 
 
@@ -69,7 +64,7 @@ namespace ViewModels
             }
             catch (Exception e)
             {
-                XtraMessageBox.Show("Error!,try again." + "" + e.Source);
+                XtraMessageBox.Show(e.Message);
             }
         }
 
