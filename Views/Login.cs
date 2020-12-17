@@ -10,15 +10,10 @@ namespace Views
         public Login()
         {
             InitializeComponent();
+            this.signIn.Click += delegate { this.Hide(); new Main().ShowDialog(); this.Close(); };
         }
 
-        private void signIn_Click(object sender, EventArgs e)
-        {
-            Main main = new Main();
-            main.ShowDialog();
-            this.Hide();
-            this.Close();
-        }
+        
     }
 
        

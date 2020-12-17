@@ -34,9 +34,9 @@ namespace Models
         public DbSet<Products> Products { get; set; }
         public DbSet<Providers> Providers { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Users> Users { get; set; }
         public DbSet<Invoice_detail> Invoice_detail { get; set; }
         public DbSet<Order_Detail> Order_Detail { get; set; }
-        public DbSet<Invoice> Invoice { get; set; }
     }
 }

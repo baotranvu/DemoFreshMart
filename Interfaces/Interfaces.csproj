@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="IAuthViewModel.cs" />
     <Compile Include="ICustomerViewModel.cs" />
+    <Compile Include="IDetailView.cs" />
     <Compile Include="IEmployeeViewModel.cs" />
     <Compile Include="IFunctionViewModel.cs" />
     <Compile Include="IInvoiceViewModel.cs" />

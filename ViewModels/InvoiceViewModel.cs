@@ -9,10 +9,35 @@ using DevExpress.XtraLayout;
 using System.Threading;
 using System;
 
+
 namespace ViewModels
 {
     public class InvoiceViewModel : INotifyPropertyChanged, IInvoiceViewModel
     {
+        
+        private SuperMarketEntities db;
+        public InvoiceViewModel() => db = new SuperMarketEntities();
+        public BindingSource InvoiceBindingSource { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
+
+        
+      
+        public void Dispose()
+        {
+            InvoiceBindingSource.Dispose();
+        }
+
+        public void Load()
+        {
+            db.Invoices.Load();
+            InvoiceBindingSource.DataSource = db.Invoices.Local.ToBindingList();
+        }
+
+        public void ShowDetail(IDetailView detail)
+        {
+            detail.BindingSource.DataSource = InvoiceBindingSource.Current;
+            detail.BindingSource.DataMember = "Invoice_detail";
+            detail.ShowModal();
+        }
     }
 }

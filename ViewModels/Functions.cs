@@ -2,6 +2,7 @@
 using DevExpress.XtraLayout;
 using System.Data.SqlClient;
 using System.Data.Entity.Core.EntityClient;
+using System.Windows.Forms;
 
 namespace ViewModels
 {
@@ -53,6 +54,7 @@ namespace ViewModels
 
             return check;
         }
+        
     }
 }
 

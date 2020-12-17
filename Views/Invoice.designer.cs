@@ -1,4 +1,4 @@
-﻿namespace App
+﻿namespace Views
 {
     partial class Invoice
     {
@@ -52,7 +52,7 @@
             this.Inv.TabIndex = 0;
             this.Inv.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.Inv.Click += new System.EventHandler(this.Inv_Click);
+           
             // 
             // gridView1
             // 
@@ -92,7 +92,7 @@
             // 
             // invoicesBindingSource
             // 
-            this.invoicesBindingSource.DataSource = typeof(Models.Invoices);
+           
             // 
             // Invoice
             // 
@@ -102,7 +102,7 @@
             this.Controls.Add(this.Inv);
             this.Name = "Invoice";
             this.Text = "Invoice form";
-            this.Load += new System.EventHandler(this.Invoice_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.Inv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoicesBindingSource)).EndInit();

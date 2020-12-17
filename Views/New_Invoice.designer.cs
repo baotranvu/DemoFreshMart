@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_Invoice));
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -47,15 +48,18 @@
             this.UnitPriceCol2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.xtraTabNewInvoice = new DevExpress.XtraTab.XtraTabControl();
-            this.Total = new DevExpress.XtraEditors.TextEdit();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.SKU = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabNewInvoice = new DevExpress.XtraTab.XtraTabControl();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Change_edt = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -65,18 +69,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).BeginInit();
-            this.xtraTabNewInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Total.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SKU.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).BeginInit();
+            this.xtraTabNewInvoice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Change_edt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // barButtonItem1
@@ -240,59 +247,10 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 588);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // xtraTabNewInvoice
-            // 
-            this.xtraTabNewInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabNewInvoice.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabNewInvoice.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabNewInvoice.Name = "xtraTabNewInvoice";
-            this.xtraTabNewInvoice.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabNewInvoice.Size = new System.Drawing.Size(863, 593);
-            this.xtraTabNewInvoice.TabIndex = 0;
-            this.xtraTabNewInvoice.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            // 
-            // Total
-            // 
-            this.Total.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Total.Location = new System.Drawing.Point(73, 3);
-            this.Total.Margin = new System.Windows.Forms.Padding(0);
-            this.Total.Name = "Total";
-            this.Total.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Properties.Appearance.Options.UseFont = true;
-            this.Total.Size = new System.Drawing.Size(726, 26);
-            this.Total.StyleController = this.layoutControl1;
-            this.Total.TabIndex = 4;
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1});
-            this.Root.Name = "Root";
-            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(802, 38);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.Total;
-            this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(3, 3, 3, 3);
-            this.layoutControlItem1.Size = new System.Drawing.Size(802, 38);
-            this.layoutControlItem1.Text = "Total:";
-            this.layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
-            this.layoutControlItem1.TextLocation = DevExpress.Utils.Locations.Left;
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(65, 32);
-            this.layoutControlItem1.TextToControlDistance = 5;
-            // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.Total);
+            this.layoutControl1.Controls.Add(this.Change_edt);
+            this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 558);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(0);
@@ -302,6 +260,18 @@
             this.layoutControl1.Size = new System.Drawing.Size(819, 30);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem3});
+            this.Root.Name = "Root";
+            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.Root.Size = new System.Drawing.Size(802, 36);
+            this.Root.TextVisible = false;
             // 
             // layoutControl2
             // 
@@ -315,6 +285,17 @@
             this.layoutControl2.TabIndex = 2;
             this.layoutControl2.Text = "layoutControl2";
             // 
+            // SKU
+            // 
+            this.SKU.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.productsBindingSource, "SKU", true));
+            this.SKU.Location = new System.Drawing.Point(28, 2);
+            this.SKU.Name = "SKU";
+            this.SKU.Properties.Mask.EditMask = "PD.\\d{2}";
+            this.SKU.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
+            this.SKU.Size = new System.Drawing.Size(133, 20);
+            this.SKU.StyleController = this.layoutControl2;
+            this.SKU.TabIndex = 4;
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -326,16 +307,6 @@
             this.layoutControlGroup1.Size = new System.Drawing.Size(163, 24);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // SKU
-            // 
-            this.SKU.Location = new System.Drawing.Point(29, 2);
-            this.SKU.Name = "SKU";
-            this.SKU.Properties.Mask.EditMask = "PD.\\d{2}";
-            this.SKU.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Regular;
-            this.SKU.Size = new System.Drawing.Size(132, 20);
-            this.SKU.StyleController = this.layoutControl2;
-            this.SKU.TabIndex = 4;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.SKU;
@@ -344,6 +315,63 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(163, 24);
             this.layoutControlItem2.Text = "SKU:";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(23, 13);
+            // 
+            // xtraTabNewInvoice
+            // 
+            this.xtraTabNewInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabNewInvoice.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.xtraTabNewInvoice.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabNewInvoice.Name = "xtraTabNewInvoice";
+            this.xtraTabNewInvoice.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabNewInvoice.Size = new System.Drawing.Size(863, 593);
+            this.xtraTabNewInvoice.TabIndex = 0;
+            this.xtraTabNewInvoice.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataSource = typeof(Models.Products);
+            // 
+            // Change_edt
+            // 
+            this.Change_edt.Location = new System.Drawing.Point(482, 0);
+            this.Change_edt.Margin = new System.Windows.Forms.Padding(0);
+            this.Change_edt.Name = "Change_edt";
+            this.Change_edt.Size = new System.Drawing.Size(320, 20);
+            this.Change_edt.StyleController = this.layoutControl1;
+            this.Change_edt.TabIndex = 5;
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.Change_edt;
+            this.layoutControlItem3.CustomizationFormText = "CHANGE";
+            this.layoutControlItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem3.ImageOptions.Image")));
+            this.layoutControlItem3.Location = new System.Drawing.Point(401, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem3.Size = new System.Drawing.Size(401, 36);
+            this.layoutControlItem3.Text = "CHANGE";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(78, 32);
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(83, 2);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(316, 20);
+            this.textEdit1.StyleController = this.layoutControl1;
+            this.textEdit1.TabIndex = 6;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.textEdit1;
+            this.layoutControlItem1.CustomizationFormText = "TOTAL";
+            this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(401, 36);
+            this.layoutControlItem1.Text = "TOTAL:";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 32);
             // 
             // New_Invoice
             // 
@@ -362,18 +390,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).EndInit();
-            this.xtraTabNewInvoice.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Total.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SKU.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).EndInit();
+            this.xtraTabNewInvoice.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Change_edt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,12 +430,15 @@
         private DevExpress.XtraGrid.Columns.GridColumn DiscountCol;
         private DevExpress.XtraGrid.Columns.GridColumn AmountCol;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
-        private DevExpress.XtraEditors.TextEdit Total;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
         private DevExpress.XtraEditors.TextEdit SKU;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.TextEdit Change_edt;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

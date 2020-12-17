@@ -21,11 +21,11 @@ namespace Models
     
         public int InvIntID { get; set; }
         public string InvID { get; set; }
-        public string CusID { get; set; }
         public string EmpID { get; set; }
         public System.DateTime Date { get; set; }
+        public decimal Total { get; set; }
+        public decimal Cash { get; set; }
     
-        public virtual Customers Customers { get; set; }
         public virtual Employees Employees { get; set; }
         public virtual ICollection<Invoice_detail> Invoice_detail { get; set; }
     }

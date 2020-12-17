@@ -18,7 +18,6 @@ namespace Models
         public string SKU { get; set; }
         public decimal Quantity { get; set; }
         public decimal Amount { get; set; }
-        public decimal Total { get; set; }
     
         public virtual Invoices Invoices { get; set; }
         public virtual Products Products { get; set; }

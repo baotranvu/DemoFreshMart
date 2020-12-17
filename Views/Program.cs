@@ -5,7 +5,7 @@ using ViewModels;
 using Interfaces;
 using DevExpress.XtraEditors;
 using System.Threading;
-
+using Models;
 
 namespace Views
 {
@@ -23,7 +23,8 @@ namespace Views
             Container.RegisterType<IUserViewModel, UserViewModel>();
             Container.RegisterType<IRoleViewModel, RoleViewModel>();
             Container.RegisterType<IFunctionViewModel, FunctionViewModel>();
-            Container.RegisterType<IAuthViewModel, AuthViewModel>();     
+            Container.RegisterType<IAuthViewModel, AuthViewModel>();
+            Container.RegisterType<IDetailView, Invoice_detail>();
         }
     }
    

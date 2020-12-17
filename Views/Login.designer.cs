@@ -104,7 +104,7 @@
             this.signIn.StyleController = this.layoutControl1;
             this.signIn.TabIndex = 7;
             this.signIn.Text = "Sign in";
-            this.signIn.Click += new System.EventHandler(this.signIn_Click);
+ 
             // 
             // Root
             // 
