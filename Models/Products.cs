@@ -29,7 +29,7 @@ namespace Models
         public Nullable<System.DateTime> MFG { get; set; }
         public Nullable<System.DateTime> EXP { get; set; }
         public decimal InStock { get; set; }
-        public Nullable<decimal> Discount { get; set; }
+        public decimal Discount { get; set; }
     
         public virtual ICollection<Invoice_detail> Invoice_detail { get; set; }
         public virtual ICollection<Order_Detail> Order_Detail { get; set; }

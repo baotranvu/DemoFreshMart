@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
 
 namespace Interfaces
 {
     public interface IOrderViewModel
     {
+        BindingSource OrderBindingSource { get; set; }
+        event PropertyChangedEventHandler PropertyChanged;
+        void Dispose();
+        void Load();
+        void ShowDetail(IOrderDetail detail);
     }
 }

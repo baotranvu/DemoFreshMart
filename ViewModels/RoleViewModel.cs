@@ -23,7 +23,6 @@ namespace ViewModels
         {
             Roles role = new Roles();
             RoleBindingSource.Add(role);
-            RoleBindingSource.MoveLast();
             db.Roles.Add(role);
         }
 

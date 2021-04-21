@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using ViewModels;
 
 namespace Views
 {
     public partial class User : DevExpress.XtraEditors.XtraForm
     {
+        private UserViewModel vm;
         public User()
         {
             InitializeComponent();
+            vm = new UserViewModel();
+            vm.UserBindingSource = usersBindingSource;
+            this.Load += delegate { vm.Load(); };
+            this.Save_btn.Click += delegate { vm.SaveAsync(); };
+            this.Update_btn.Click += delegate { vm.Delete(); };
+            this.FormClosing += delegate { vm.Dispose(); };
         }
     }
 }

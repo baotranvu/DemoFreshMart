@@ -38,6 +38,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.exit_btn = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.user_edt.Properties)).BeginInit();
@@ -46,6 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,6 +66,7 @@
             this.layoutControl1.Controls.Add(this.user_edt);
             this.layoutControl1.Controls.Add(this.pass_edt);
             this.layoutControl1.Controls.Add(this.signIn);
+            this.layoutControl1.Controls.Add(this.exit_btn);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 156);
             this.layoutControl1.Name = "layoutControl1";
@@ -100,11 +104,10 @@
             // 
             this.signIn.Location = new System.Drawing.Point(12, 60);
             this.signIn.Name = "signIn";
-            this.signIn.Size = new System.Drawing.Size(391, 22);
+            this.signIn.Size = new System.Drawing.Size(193, 22);
             this.signIn.StyleController = this.layoutControl1;
             this.signIn.TabIndex = 7;
             this.signIn.Text = "Sign in";
- 
             // 
             // Root
             // 
@@ -113,7 +116,8 @@
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem1,
             this.layoutControlItem2,
-            this.layoutControlItem4});
+            this.layoutControlItem4,
+            this.layoutControlItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(415, 99);
             this.Root.TextVisible = false;
@@ -149,16 +153,37 @@
             this.layoutControlItem4.CustomizationFormText = "layoutControlItem4";
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 48);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(395, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(197, 31);
             this.layoutControlItem4.TextLocation = DevExpress.Utils.Locations.Left;
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
+            // 
+            // exit_btn
+            // 
+            this.exit_btn.Location = new System.Drawing.Point(209, 60);
+            this.exit_btn.Name = "exit_btn";
+            this.exit_btn.Size = new System.Drawing.Size(194, 22);
+            this.exit_btn.StyleController = this.layoutControl1;
+            this.exit_btn.TabIndex = 8;
+            this.exit_btn.Text = "Exit";
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.exit_btn;
+            this.layoutControlItem3.CustomizationFormText = "Exit";
+            this.layoutControlItem3.Location = new System.Drawing.Point(197, 48);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(198, 31);
+            this.layoutControlItem3.Text = "Exit";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(415, 255);
+            this.ControlBox = false;
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -174,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +214,7 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraEditors.SimpleButton exit_btn;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
     }
 }

@@ -20,7 +20,10 @@ namespace Views
             this.accordionInvoices.Click += delegate {  new Invoice().ShowDialog();  };
             this.accordionNewOder.Click += delegate {  new New_Order().ShowDialog();  };
             this.accordionProductInfo.Click += delegate {  new Product().ShowDialog();  };
-            this.Logout_btn.ItemClick += delegate { this.Hide(); new Login().ShowDialog(); this.Dispose(); };
+
+            this.accordionOder.Click += delegate { new Oder().ShowDialog(); };
+            this.accordionFunction.Click += delegate { new Function().ShowDialog(); };
+            this.FormClosing += delegate { this.Hide(); new Login().ShowDialog(); this.Close(); };
         }
 
 

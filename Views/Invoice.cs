@@ -1,6 +1,5 @@
-﻿using System;
+﻿
 using ViewModels;
-using DevExpress.XtraEditors;
 using Interfaces;
 using Unity;
 
@@ -17,7 +16,7 @@ namespace Views
             vm.InvoiceBindingSource = invoicesBindingSource;
             this.Load += delegate { vm.Load(); };
             this.FormClosing += delegate { vm.Dispose(); };
-            Inv.MouseDoubleClick += delegate { vm.ShowDetail(Config.Container.Resolve<IDetailView>()); };
+            Inv.MouseDoubleClick += delegate { vm.ShowDetail(Config.Container.Resolve<IInvoiceDetail>()); };
             
         }
         

@@ -148,7 +148,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Role";
             this.Text = "Role";
-            this.Load += new System.EventHandler(this.Role_Load);
+            
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridRole)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rolesBindingSource)).EndInit();

@@ -24,7 +24,6 @@ namespace Models
         public string EmpID { get; set; }
         public System.DateTime Date { get; set; }
         public decimal Total { get; set; }
-        public decimal Cash { get; set; }
     
         public virtual Employees Employees { get; set; }
         public virtual ICollection<Invoice_detail> Invoice_detail { get; set; }

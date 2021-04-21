@@ -1,7 +1,4 @@
 ﻿
-using System;
-using Interfaces;
-using Unity;
 using ViewModels;
 
 
@@ -23,9 +20,6 @@ namespace Views
             this.FormClosing += delegate { vm.Dispose(); };
         }
 
-        private void Role_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

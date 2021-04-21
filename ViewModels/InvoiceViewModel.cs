@@ -33,7 +33,7 @@ namespace ViewModels
             InvoiceBindingSource.DataSource = db.Invoices.Local.ToBindingList();
         }
 
-        public void ShowDetail(IDetailView detail)
+        public void ShowDetail(IInvoiceDetail detail)
         {
             detail.BindingSource.DataSource = InvoiceBindingSource.Current;
             detail.BindingSource.DataMember = "Invoice_detail";

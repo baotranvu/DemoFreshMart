@@ -1,4 +1,4 @@
-﻿namespace App
+﻿namespace Views
 {
     partial class Oder
     {
@@ -30,41 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Oder));
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.mOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ord_grid = new DevExpress.XtraGrid.GridControl();
+            this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridOrder = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.OrdID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EmpID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ProID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrdDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Total = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ord_grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // ord_grid
             // 
-            this.gridControl1.DataSource = this.mOrderBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(687, 403);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.ord_grid.DataSource = this.ordersBindingSource;
+            this.ord_grid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ord_grid.Location = new System.Drawing.Point(0, 0);
+            this.ord_grid.MainView = this.gridOrder;
+            this.ord_grid.Name = "ord_grid";
+            this.ord_grid.Size = new System.Drawing.Size(687, 403);
+            this.ord_grid.TabIndex = 0;
+            this.ord_grid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridOrder});
             // 
-            // gridView1
+            // ordersBindingSource
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ordersBindingSource.DataSource = typeof(Models.Orders);
+            // 
+            // gridOrder
+            // 
+            this.gridOrder.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.OrdID,
             this.EmpID,
             this.ProID,
             this.OrdDate,
             this.Total});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gridOrder.GridControl = this.ord_grid;
+            this.gridOrder.Name = "gridOrder";
+            this.gridOrder.OptionsBehavior.Editable = false;
             // 
             // OrdID
             // 
@@ -92,7 +97,7 @@
             // 
             // OrdDate
             // 
-            this.OrdDate.FieldName = "OrdDate";
+            this.OrdDate.FieldName = "Orddate";
             this.OrdDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("OrdDate.ImageOptions.Image")));
             this.OrdDate.Name = "OrdDate";
             this.OrdDate.Visible = true;
@@ -111,27 +116,26 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 403);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.ord_grid);
             this.Name = "Oder";
             this.Text = "Oder form";
-            this.Load += new System.EventHandler(this.Oder_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mOrderBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ord_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl ord_grid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridOrder;
         private DevExpress.XtraGrid.Columns.GridColumn OrdID;
         private DevExpress.XtraGrid.Columns.GridColumn EmpID;
         private DevExpress.XtraGrid.Columns.GridColumn ProID;
         private DevExpress.XtraGrid.Columns.GridColumn OrdDate;
         
         private DevExpress.XtraGrid.Columns.GridColumn Total;
-        private System.Windows.Forms.BindingSource mOrderBindingSource;
+        private System.Windows.Forms.BindingSource ordersBindingSource;
     }
 }

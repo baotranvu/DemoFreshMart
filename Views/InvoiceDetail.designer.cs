@@ -1,6 +1,6 @@
 ﻿namespace Views
 {
-    partial class Invoice_detail
+    partial class InvoiceDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -41,14 +41,10 @@
             this.inv_lb = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.change_lb = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.change_t = new System.Windows.Forms.TableLayoutPanel();
             this.total_lb = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.item_lb = new System.Windows.Forms.Label();
-            this.cash_lb = new System.Windows.Forms.Label();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.QuantityCol = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,12 +52,19 @@
             this.AmountCol = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_detailBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.change_t.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -83,15 +86,15 @@
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(341, 190);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(280, 100);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
             // emp_lb
@@ -99,9 +102,9 @@
             this.emp_lb.AutoSize = true;
             this.emp_lb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoice_detailBindingSource, "Invoices.Employees.Name", true));
             this.emp_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.emp_lb.Location = new System.Drawing.Point(173, 126);
+            this.emp_lb.Location = new System.Drawing.Point(143, 66);
             this.emp_lb.Name = "emp_lb";
-            this.emp_lb.Size = new System.Drawing.Size(165, 13);
+            this.emp_lb.Size = new System.Drawing.Size(134, 13);
             this.emp_lb.TabIndex = 8;
             this.emp_lb.Text = "label9";
             this.emp_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,9 +117,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 126);
+            this.label8.Location = new System.Drawing.Point(3, 66);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 13);
+            this.label8.Size = new System.Drawing.Size(134, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Employee:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,9 +129,9 @@
             this.date_lb.AutoSize = true;
             this.date_lb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoice_detailBindingSource, "Invoices.Date", true));
             this.date_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.date_lb.Location = new System.Drawing.Point(173, 113);
+            this.date_lb.Location = new System.Drawing.Point(143, 53);
             this.date_lb.Name = "date_lb";
-            this.date_lb.Size = new System.Drawing.Size(165, 13);
+            this.date_lb.Size = new System.Drawing.Size(134, 13);
             this.date_lb.TabIndex = 6;
             this.date_lb.Text = "label7";
             this.date_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,9 +140,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 113);
+            this.label6.Location = new System.Drawing.Point(3, 53);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 13);
+            this.label6.Size = new System.Drawing.Size(134, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Date";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,9 +151,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(3, 100);
+            this.label4.Location = new System.Drawing.Point(3, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 13);
+            this.label4.Size = new System.Drawing.Size(134, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Receipt No:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,7 +167,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(341, 50);
+            this.label1.Size = new System.Drawing.Size(280, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "FRESH MART";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -174,10 +177,10 @@
             this.label2.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label2, 2);
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(1, 51);
+            this.label2.Location = new System.Drawing.Point(1, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 48);
+            this.label2.Size = new System.Drawing.Size(278, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "8657 Meadow Street Belmont, MA 02478";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,9 +190,9 @@
             this.inv_lb.AutoSize = true;
             this.inv_lb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoice_detailBindingSource, "InvID", true));
             this.inv_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inv_lb.Location = new System.Drawing.Point(173, 100);
+            this.inv_lb.Location = new System.Drawing.Point(143, 40);
             this.inv_lb.Name = "inv_lb";
-            this.inv_lb.Size = new System.Drawing.Size(165, 13);
+            this.inv_lb.Size = new System.Drawing.Size(134, 13);
             this.inv_lb.TabIndex = 12;
             this.inv_lb.Text = "label3";
             this.inv_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,12 +202,12 @@
             this.label3.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label3, 2);
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 139);
+            this.label3.Location = new System.Drawing.Point(3, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(335, 51);
+            this.label3.Size = new System.Drawing.Size(274, 21);
             this.label3.TabIndex = 13;
             this.label3.Text = "Description:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tableLayoutPanel1
             // 
@@ -212,86 +215,46 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.change_t, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.gridControl1, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(343, 519);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(282, 381);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel3
+            // change_t
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Controls.Add(this.change_lb, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label18, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label15, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.total_lb, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.label13, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.item_lb, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cash_lb, 2, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 453);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(343, 66);
-            this.tableLayoutPanel3.TabIndex = 5;
-            // 
-            // change_lb
-            // 
-            this.change_lb.AutoSize = true;
-            this.change_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.change_lb.Location = new System.Drawing.Point(242, 45);
-            this.change_lb.Name = "change_lb";
-            this.change_lb.Size = new System.Drawing.Size(98, 21);
-            this.change_lb.TabIndex = 8;
-            this.change_lb.Text = "Change";
-            this.change_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label18, 2);
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(3, 45);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(233, 21);
-            this.label18.TabIndex = 6;
-            this.label18.Text = "CHANGE:";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.tableLayoutPanel3.SetColumnSpan(this.label15, 2);
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(3, 26);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(233, 19);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "CASH:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.change_t.ColumnCount = 3;
+            this.change_t.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.change_t.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.change_t.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.change_t.Controls.Add(this.total_lb, 2, 0);
+            this.change_t.Controls.Add(this.label13, 1, 0);
+            this.change_t.Controls.Add(this.item_lb, 0, 0);
+            this.change_t.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.change_t.Location = new System.Drawing.Point(0, 353);
+            this.change_t.Margin = new System.Windows.Forms.Padding(0);
+            this.change_t.Name = "change_t";
+            this.change_t.RowCount = 1;
+            this.change_t.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.change_t.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.change_t.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.change_t.Size = new System.Drawing.Size(282, 28);
+            this.change_t.TabIndex = 5;
             // 
             // total_lb
             // 
             this.total_lb.AutoSize = true;
             this.total_lb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoice_detailBindingSource, "Invoices.Total", true));
             this.total_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.total_lb.Location = new System.Drawing.Point(242, 0);
+            this.total_lb.Location = new System.Drawing.Point(199, 0);
             this.total_lb.Name = "total_lb";
-            this.total_lb.Size = new System.Drawing.Size(98, 26);
+            this.total_lb.Size = new System.Drawing.Size(80, 28);
             this.total_lb.TabIndex = 2;
             this.total_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -299,9 +262,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(105, 0);
+            this.label13.Location = new System.Drawing.Point(87, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(131, 26);
+            this.label13.Size = new System.Drawing.Size(106, 28);
             this.label13.TabIndex = 1;
             this.label13.Text = "(VAT Included)";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -312,34 +275,23 @@
             this.item_lb.Dock = System.Windows.Forms.DockStyle.Fill;
             this.item_lb.Location = new System.Drawing.Point(3, 0);
             this.item_lb.Name = "item_lb";
-            this.item_lb.Size = new System.Drawing.Size(96, 26);
+            this.item_lb.Size = new System.Drawing.Size(78, 28);
             this.item_lb.TabIndex = 0;
             this.item_lb.Text = "Item(s):";
             this.item_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cash_lb
-            // 
-            this.cash_lb.AutoSize = true;
-            this.cash_lb.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.invoice_detailBindingSource, "Invoices.Cash", true));
-            this.cash_lb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cash_lb.Location = new System.Drawing.Point(242, 26);
-            this.cash_lb.Name = "cash_lb";
-            this.cash_lb.Size = new System.Drawing.Size(98, 19);
-            this.cash_lb.TabIndex = 9;
-            this.cash_lb.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.invoice_detailBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 192);
+            this.gridControl1.Location = new System.Drawing.Point(0, 102);
             this.gridControl1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.gridControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.gridControl1.LookAndFeel.UseDefaultLookAndFeel = false;
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(0);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(343, 261);
+            this.gridControl1.Size = new System.Drawing.Size(282, 251);
             this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -353,6 +305,11 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedRow = false;
+            this.gridView1.OptionsSelection.EnableAppearanceHideSelection = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // QuantityCol
@@ -391,7 +348,41 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Width = 149;
             // 
-            // Invoice_detail
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.tableLayoutPanel1);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(398, 271, 650, 400);
+            this.layoutControl1.Root = this.Root;
+            this.layoutControl1.Size = new System.Drawing.Size(282, 381);
+            this.layoutControl1.TabIndex = 1;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1});
+            this.Root.Name = "Root";
+            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.Root.Size = new System.Drawing.Size(282, 381);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.tableLayoutPanel1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
+            this.layoutControlItem1.Size = new System.Drawing.Size(282, 381);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // InvoiceDetail
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,20 +391,26 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(343, 519);
+            this.ClientSize = new System.Drawing.Size(282, 381);
             this.ControlBox = false;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.layoutControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Invoice_detail";
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.Name = "InvoiceDetail";
             this.Text = "Receipt";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.invoice_detailBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.change_t.ResumeLayout(false);
+            this.change_t.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,10 +426,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label change_lb;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TableLayoutPanel change_t;
         private System.Windows.Forms.Label total_lb;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label item_lb;
@@ -446,6 +440,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn ProductCol;
         private DevExpress.XtraGrid.Columns.GridColumn AmountCol;
         private System.Windows.Forms.BindingSource invoice_detailBindingSource;
-        private System.Windows.Forms.Label cash_lb;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
     }
 }

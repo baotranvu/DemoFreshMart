@@ -60,6 +60,7 @@
             this.accordionControlSeparator6 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionNewOder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionOder = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator14 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.accordionProductInfo = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator15 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -70,7 +71,6 @@
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.accordionFunctionTab = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.Logout_btn = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.fluentDesignFormContainer1.SuspendLayout();
@@ -282,6 +282,7 @@
             // 
             this.accordionProduct.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionNewOder,
+            this.accordionOder,
             this.accordionControlSeparator14,
             this.accordionProductInfo,
             this.accordionControlSeparator15});
@@ -296,6 +297,13 @@
             this.accordionNewOder.Name = "accordionNewOder";
             this.accordionNewOder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionNewOder.Text = "New Order";
+            // 
+            // accordionOder
+            // 
+            this.accordionOder.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionOder.ImageOptions.Image")));
+            this.accordionOder.Name = "accordionOder";
+            this.accordionOder.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionOder.Text = "Orders";
             // 
             // accordionControlSeparator14
             // 
@@ -318,8 +326,7 @@
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem2,
             this.barButtonItem1,
-            this.skinDropDownButtonItem1,
-            this.Logout_btn});
+            this.skinDropDownButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(770, 29);
@@ -327,7 +334,6 @@
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem1);
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.Logout_btn);
             // 
             // barButtonItem2
             // 
@@ -380,15 +386,6 @@
             this.accordionFunctionTab.Name = "accordionFunctionTab";
             this.accordionFunctionTab.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionFunctionTab.Text = "Function";
-            // 
-            // Logout_btn
-            // 
-            this.Logout_btn.Caption = "Log out ";
-            this.Logout_btn.Id = 0;
-            this.Logout_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.Logout_btn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.Logout_btn.Name = "Logout_btn";
-            this.Logout_btn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // Main
             // 
@@ -454,6 +451,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionUser;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionRole;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionFunction;
-        private DevExpress.XtraBars.BarButtonItem Logout_btn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionOder;
     }
 }

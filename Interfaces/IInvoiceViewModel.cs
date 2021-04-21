@@ -9,7 +9,7 @@ namespace Interfaces
       event PropertyChangedEventHandler PropertyChanged;
       void Dispose();
       void Load();
-      void ShowDetail(IDetailView detail);
+      void ShowDetail(IInvoiceDetail detail);
 
 
     }

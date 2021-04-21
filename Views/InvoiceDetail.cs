@@ -1,54 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using Interfaces;
-using System.Data.Entity;
+using DevExpress.XtraEditors;
+
 
 namespace Views
 {
-    public partial class Invoice_detail : Form, IDetailView
+    public partial class InvoiceDetail : Form, IInvoiceDetail
     {
         public BindingSource BindingSource { get => invoice_detailBindingSource;  set => invoice_detailBindingSource = value; }
         
-        public Invoice_detail()
+        public InvoiceDetail()
         {
-
             InitializeComponent();
-            gridControl1.KeyPress += new KeyPressEventHandler(PrintOrExit);
+            KeyDown += new KeyEventHandler(InvoicePrintExit);
+            Load += delegate { item_lb.Text = BindingSource.Count.ToString() + "item(s)"; };
             
-
-
         }
 
-        
+      
+    
 
         public void ShowModal()
         {
-           
             ShowDialog();
             
-
         }
-
         
-        private void PrintOrExit(object sender, KeyPressEventArgs e)
+        
+
+        public void InvoicePrintExit(object sender, KeyEventArgs e)
         {
-            if(e.KeyChar == (char)Keys.Escape)
+            
+            if (e.KeyCode == Keys.Escape)
             {
-                this.Dispose();
+                Close();
             }
-            else if (e.KeyChar == (char)Keys.P)
+            else if(e.KeyCode == Keys.P && e.Control)
             {
-                PrintDialog printDialog = new PrintDialog();
-                printDialog.ShowDialog();
+                layoutControl1.ShowRibbonPrintPreview();
+                
             }
+            
         }
 
         

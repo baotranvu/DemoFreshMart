@@ -11,6 +11,7 @@ namespace Views
         {
             InitializeComponent();
             this.signIn.Click += delegate { this.Hide(); new Main().ShowDialog(); this.Close(); };
+            this.exit_btn.Click += delegate { this.Dispose(); };
         }
 
         

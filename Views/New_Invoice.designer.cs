@@ -52,14 +52,11 @@
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.SKU = new DevExpress.XtraEditors.TextEdit();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.xtraTabNewInvoice = new DevExpress.XtraTab.XtraTabControl();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Change_edt = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleLabelItem1 = new DevExpress.XtraLayout.SimpleLabelItem();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -70,20 +67,16 @@
             this.xtraTabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
-            this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SKU.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).BeginInit();
             this.xtraTabNewInvoice.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Change_edt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // barButtonItem1
@@ -106,7 +99,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Margin = new System.Windows.Forms.Padding(0);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(819, 529);
+            this.gridControl1.Size = new System.Drawing.Size(819, 537);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -226,7 +219,7 @@
             this.xtraTabPage1.Controls.Add(this.tableLayoutPanel1);
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(819, 588);
+            this.xtraTabPage1.Size = new System.Drawing.Size(819, 597);
             this.xtraTabPage1.Text = "New Invoice";
             // 
             // tableLayoutPanel1
@@ -244,20 +237,18 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 588);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(819, 597);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.Change_edt);
-            this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl1.Location = new System.Drawing.Point(0, 558);
+            this.layoutControl1.Location = new System.Drawing.Point(0, 566);
             this.layoutControl1.Margin = new System.Windows.Forms.Padding(0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(716, 67, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(819, 30);
+            this.layoutControl1.Size = new System.Drawing.Size(819, 31);
             this.layoutControl1.TabIndex = 1;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -266,8 +257,7 @@
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem1,
-            this.layoutControlItem3});
+            this.simpleLabelItem1});
             this.Root.Name = "Root";
             this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.Root.Size = new System.Drawing.Size(802, 36);
@@ -296,6 +286,10 @@
             this.SKU.StyleController = this.layoutControl2;
             this.SKU.TabIndex = 4;
             // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataSource = typeof(Models.Products);
+            // 
             // layoutControlGroup1
             // 
             this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -323,61 +317,27 @@
             this.xtraTabNewInvoice.Location = new System.Drawing.Point(0, 0);
             this.xtraTabNewInvoice.Name = "xtraTabNewInvoice";
             this.xtraTabNewInvoice.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabNewInvoice.Size = new System.Drawing.Size(863, 593);
+            this.xtraTabNewInvoice.Size = new System.Drawing.Size(863, 602);
             this.xtraTabNewInvoice.TabIndex = 0;
             this.xtraTabNewInvoice.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
             // 
-            // productsBindingSource
+            // simpleLabelItem1
             // 
-            this.productsBindingSource.DataSource = typeof(Models.Products);
-            // 
-            // Change_edt
-            // 
-            this.Change_edt.Location = new System.Drawing.Point(482, 0);
-            this.Change_edt.Margin = new System.Windows.Forms.Padding(0);
-            this.Change_edt.Name = "Change_edt";
-            this.Change_edt.Size = new System.Drawing.Size(320, 20);
-            this.Change_edt.StyleController = this.layoutControl1;
-            this.Change_edt.TabIndex = 5;
-            // 
-            // layoutControlItem3
-            // 
-            this.layoutControlItem3.Control = this.Change_edt;
-            this.layoutControlItem3.CustomizationFormText = "CHANGE";
-            this.layoutControlItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem3.ImageOptions.Image")));
-            this.layoutControlItem3.Location = new System.Drawing.Point(401, 0);
-            this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.layoutControlItem3.Size = new System.Drawing.Size(401, 36);
-            this.layoutControlItem3.Text = "CHANGE";
-            this.layoutControlItem3.TextSize = new System.Drawing.Size(78, 32);
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(83, 2);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(316, 20);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 6;
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.textEdit1;
-            this.layoutControlItem1.CustomizationFormText = "TOTAL";
-            this.layoutControlItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("layoutControlItem1.ImageOptions.Image")));
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(401, 36);
-            this.layoutControlItem1.Text = "TOTAL:";
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(78, 32);
+            this.simpleLabelItem1.AllowHotTrack = false;
+            this.simpleLabelItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleLabelItem1.ImageOptions.Image")));
+            this.simpleLabelItem1.Location = new System.Drawing.Point(0, 0);
+            this.simpleLabelItem1.Name = "simpleLabelItem1";
+            this.simpleLabelItem1.Size = new System.Drawing.Size(802, 36);
+            this.simpleLabelItem1.Text = "Total:";
+            this.simpleLabelItem1.TextSize = new System.Drawing.Size(65, 32);
             // 
             // New_Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 593);
+            this.ClientSize = new System.Drawing.Size(863, 602);
             this.Controls.Add(this.xtraTabNewInvoice);
             this.Name = "New_Invoice";
             this.Text = "New_Invoice form";
@@ -391,20 +351,16 @@
             this.xtraTabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
-            this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SKU.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabNewInvoice)).EndInit();
             this.xtraTabNewInvoice.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Change_edt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,10 +391,7 @@
         private DevExpress.XtraEditors.TextEdit SKU;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit Change_edt;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
     }
 }

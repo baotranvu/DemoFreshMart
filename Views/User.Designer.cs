@@ -31,24 +31,26 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Save_btn = new DevExpress.XtraEditors.SimpleButton();
             this.Update_btn = new DevExpress.XtraEditors.SimpleButton();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmpID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUserName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDateCreate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRoles = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,10 +71,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = typeof(Models.Users);
             // 
             // Save_btn
             // 
@@ -96,12 +94,30 @@
             this.Update_btn.TabIndex = 3;
             this.Update_btn.Text = "Update";
             // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = typeof(Models.Users);
+            // 
             // repositoryItemTextEdit1
             // 
             this.repositoryItemTextEdit1.AutoHeight = false;
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             this.repositoryItemTextEdit1.PasswordChar = '*';
             this.repositoryItemTextEdit1.UseSystemPasswordChar = true;
+            // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemComboBox2
+            // 
+            this.repositoryItemComboBox2.AutoHeight = false;
+            this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
             // 
             // gridView1
             // 
@@ -110,7 +126,7 @@
             this.colUserName,
             this.colPassword,
             this.colDateCreate,
-            this.colRoles});
+            this.Role});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -143,18 +159,17 @@
             this.colDateCreate.Visible = true;
             this.colDateCreate.VisibleIndex = 3;
             // 
-            // colRoles
+            // Role
             // 
-            this.colRoles.ColumnEdit = this.repositoryItemComboBox1;
-            this.colRoles.FieldName = "Roles";
-            this.colRoles.Name = "colRoles";
-            this.colRoles.Visible = true;
-            this.colRoles.VisibleIndex = 4;
+            this.Role.ColumnEdit = this.repositoryItemComboBox1;
+            this.Role.FieldName = "RoleName";
+            this.Role.Name = "Role";
+            this.Role.Visible = true;
+            this.Role.VisibleIndex = 4;
             // 
             // gridControl1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.gridControl1, 3);
-            this.gridControl1.DataSource = this.usersBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
@@ -162,18 +177,12 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
-            this.repositoryItemComboBox1});
+            this.repositoryItemComboBox1,
+            this.repositoryItemComboBox2});
             this.gridControl1.Size = new System.Drawing.Size(800, 418);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // repositoryItemComboBox1
-            // 
-            this.repositoryItemComboBox1.AutoHeight = false;
-            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
             // User
             // 
@@ -186,9 +195,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,7 +216,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colPassword;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn colDateCreate;
-        private DevExpress.XtraGrid.Columns.GridColumn colRoles;
+        private DevExpress.XtraGrid.Columns.GridColumn Role;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
     }
 }

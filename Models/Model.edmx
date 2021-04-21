@@ -78,7 +78,6 @@ warning 6002: The table/view 'SuperMarket.dbo.Invoice_detail' does not have a pr
           <Property Name="EmpID" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
           <Property Name="Total" Type="smallmoney" Nullable="false" />
-          <Property Name="Cash" Type="smallmoney" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'SuperMarket.dbo.Order_Detail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -120,7 +119,7 @@ warning 6002: The table/view 'SuperMarket.dbo.Order_Detail' does not have a prim
           <Property Name="MFG" Type="datetime" />
           <Property Name="EXP" Type="datetime" />
           <Property Name="InStock" Type="numeric" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="Discount" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Discount" Type="numeric" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Providers">
           <Key>
@@ -474,7 +473,6 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
           <Property Name="Total" Type="Decimal" Precision="10" Scale="4" Nullable="false" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Invoices_Employees" FromRole="Invoices" ToRole="Employees" />
           <NavigationProperty Name="Invoice_detail" Relationship="Self.FK_Invoice_detail_Invoices" FromRole="Invoices" ToRole="Invoice_detail" />
-          <Property Name="Cash" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -503,7 +501,7 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
           <Property Name="MFG" Type="DateTime" Precision="3" />
           <Property Name="EXP" Type="DateTime" Precision="3" />
           <Property Name="InStock" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
-          <Property Name="Discount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Discount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <NavigationProperty Name="Invoice_detail" Relationship="Self.FK_Invoice_detail_Products" FromRole="Products" ToRole="Invoice_detail" />
           <NavigationProperty Name="Order_Detail" Relationship="Self.FK_Order_Detail_Products" FromRole="Products" ToRole="Order_Detail" />
         </EntityType>
@@ -585,7 +583,7 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
         </EntityType>
         <Association Name="FK_Account_Customers">
           <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
-          <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
+          <End Role="Account" Type="Self.Account" Multiplicity="1" />
           <ReferentialConstraint>
             <Principal Role="Customers">
               <PropertyRef Name="CusID" />
@@ -813,7 +811,6 @@ FROM [dbo].[Order_Detail] AS [Order_Detail]</DefiningQuery>
           <EntitySetMapping Name="Invoices">
             <EntityTypeMapping TypeName="SuperMarketModel.Invoices">
               <MappingFragment StoreEntitySet="Invoices">
-                <ScalarProperty Name="Cash" ColumnName="Cash" />
                 <ScalarProperty Name="InvIntID" ColumnName="InvIntID" />
                 <ScalarProperty Name="InvID" ColumnName="InvID" />
                 <ScalarProperty Name="EmpID" ColumnName="EmpID" />

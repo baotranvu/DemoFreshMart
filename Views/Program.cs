@@ -24,7 +24,9 @@ namespace Views
             Container.RegisterType<IRoleViewModel, RoleViewModel>();
             Container.RegisterType<IFunctionViewModel, FunctionViewModel>();
             Container.RegisterType<IAuthViewModel, AuthViewModel>();
-            Container.RegisterType<IDetailView, Invoice_detail>();
+            Container.RegisterType<IInvoiceDetail, InvoiceDetail>();
+            Container.RegisterType<IOrderDetail, OrderDetail>();
+            
         }
     }
    
